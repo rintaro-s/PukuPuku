@@ -1,0 +1,2348 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the missioncenter package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: missioncenter\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-01 14:52+0300\n"
+"PO-Revision-Date: 2025-12-02 05:00+0000\n"
+"Last-Translator: Telaneo <post@telaneo.net>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/mission-"
+"center/mission-center/nb_NO/>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15-dev\n"
+
+#: data/io.missioncenter.MissionCenter.desktop.in:2
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:4
+msgid "Mission Center"
+msgstr "Mission Center"
+
+#: data/io.missioncenter.MissionCenter.desktop.in:9
+msgid ""
+"Task manager;Resource monitor;System monitor;Processor;Processes;Performance "
+"monitor;CPU;GPU;Disc;Disk;Memory;Network;Utilisation;Utilization"
+msgstr "Oppgavehåndterer;ressursoversikt;systemoversikt;prosessor;prosesser;ytelsesoversikt;prosessor;grafikk;disk,Minne;nettverk;bruk;anvendelse"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:6
+msgid "Mission Center Developers"
+msgstr "Mission Centers utviklere"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:16
+msgid "Monitor system resource usage"
+msgstr "Overvåk bruken av systemressurser"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:18
+msgid ""
+"Monitor your CPU, Memory, Disk, Network and GPU usage, accompanied by a per "
+"app and process breakdown of these statistics"
+msgstr ""
+"Overvåk bruken av CPU, minne, disk, nettverk og GPU, med en "
+"statistikkoversikt over apper og prosesser"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:19
+msgid "Features:"
+msgstr "Funksjoner:"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:21
+msgid "Monitor overall or per-thread CPU usage"
+msgstr "Overvåk CPU-bruken totalt eller per tråd"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:22
+msgid ""
+"See system process, thread, and handle count, uptime, clock speed (base and "
+"current), cache sizes"
+msgstr ""
+"Se systemprosesser, tråder og handles , oppetid, klokkehastighet (basis og "
+"gjeldende), hurtigbufferstørrelser"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:23
+msgid "Monitor RAM and Swap usage"
+msgstr "Overvåk bruken av RAM og swap"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:24
+msgid "See a breakdown how the memory is being used by the system"
+msgstr "Vis et sammendrag av hvordan minnet brukes av systemet"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:25
+msgid "Monitor Disk utilization and transfer rates"
+msgstr "Overvåk diskutnyttelse og overføringshastigheter"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:26
+msgid "Monitor network utilization and transfer speeds"
+msgstr "Overvåk nettverksutnyttelse og overføringshastigheter"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:27
+msgid ""
+"See network interface information such as network card name, connection type "
+"(Wi-Fi or Ethernet), wireless speeds and frequency, hardware address, IP "
+"address"
+msgstr ""
+"Vis nettverksgrensesnittsinfo, blant annet nettverkskortnavn, "
+"tilkoblingstype (Wi-Fi eller Ethernet), trådløshastigheter og frekvens, "
+"maskinvareadresse, IP-adresse"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:30
+msgid ""
+"Monitor overall GPU usage, video encoder and decoder usage, memory usage and "
+"power consumption, powered by the popular NVTOP project"
+msgstr ""
+"Overvåk samlet GPU-bruk, bruk av videokoder og -dekoder, minnebruk og "
+"strømforbruk, drevet av det populære NVTOP-prosjektet"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:33
+msgid "Monitor system fans"
+msgstr "Overvåk vifter"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:34
+msgid "See a breakdown of resource usage by app and process"
+msgstr "Vis et sammendrag av ressursbruk per program og prosess"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:35
+msgid "Supports a minified summary view for simple monitoring"
+msgstr "Støtter en forminsket sammendragsvisning for enkel overvåking"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:36
+msgid ""
+"Use hardware accelerated rendering for all the graphs in an effort to reduce "
+"CPU and overall resource usage"
+msgstr ""
+"Bruk maskinvareakselerert gjengivelse for alle grafer for å redusere CPU- og "
+"annen ressursbruk"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:39
+msgid "Uses GTK4 and Libadwaita"
+msgstr "Bruker GTK4 og Libadwaita"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:40
+msgid "Written in Rust"
+msgstr "Skrevet i Rust"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:42
+msgid "Limitations (there is ongoing work to overcome all of these):"
+msgstr "Begrensninger (det arbeides med saken):"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:44
+msgid ""
+"Intel GPU monitoring is only supported for Broadwell and later GPUs; and "
+"does not support VRAM, power, or temperature monitoring"
+msgstr ""
+"Overvåkning av Intel GPU-er er bare støttet fra Broadwell og senere, og "
+"støtter ikke overvåkning av VRAM, strømforbruk eller temperatur"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:47
+msgid ""
+"When using Linux Mint/Cinnamon, launched applications may not show up in the "
+"\"Applications\" section (Upstream issue: https://github.com/linuxmint/"
+"cinnamon/issues/12015)"
+msgstr ""
+"Når du bruker Linux Mint/Cinnamon, kan det hende at startede programmer ikke "
+"vises under «Applikasjoner» (Upstream-problem: https://github.com/linuxmint/"
+"cinnamon/issues/12015)"
+
+#: data/io.missioncenter.MissionCenter.metainfo.xml.in:51
+msgid "Comments, suggestions, bug reports and contributions welcome"
+msgstr "Kommentarer, forslag, feilrapporter og bidrag ønskes"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:46
+msgid "Which page is shown on application startup"
+msgstr "Hvilken side vises ved programoppstart"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:51
+msgid "Interface Style"
+msgstr "Grensesnittstil"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:52
+msgid "If light or dark interface style should be used"
+msgstr "Om lys- eller mørkmodus skal brukes"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:58
+msgid "DEPRECATED! NO LONGER IN USE!"
+msgstr "FORELDRET! IKKE LENGER I BRUK!"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:64
+msgid ""
+"How fast should the data be refreshed and the UI updated (in increments of "
+"50ms)"
+msgstr ""
+"Hvor raskt skal dataene gjenoppfriskes og brukerflaten oppdateres (i trinn "
+"på 50 ms)"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:70
+msgid "How many points should be displayed on each chart?"
+msgstr "Hvor mange punkter skal vises på hvert diagram?"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:75
+msgid "Whether or not to use bits or bytes (default) for memory"
+msgstr "Om du vil bruke bits eller byte (standard) for minne"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:80
+msgid "Whether or not to use base-10 or base-2 (default) for memory"
+msgstr ""
+"Om 10-tallsystemet eller 2-tallsystemet (standard) skal brukes for minne"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:85
+msgid "Whether or not to use bits or bytes (default) for drive speed + size"
+msgstr ""
+"Om du vil bruke bits eller byte (standard) for diskhastighet- og størrelse"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:90
+msgid ""
+"Whether or not to use base-10 or base-2 (default) for drive speed + size"
+msgstr ""
+"Om 10-tallsystemet eller 2-tallsystemet (standard) skal brukes for "
+"diskhastighet- og størrelse"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:95
+msgid "Whether or not to use bits (default) or Bytes for network speed"
+msgstr "Om du vil bruke bits (standard) eller byte for nettverkshastighet"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:100
+msgid "Whether or not to use base-10 (default) or base-2 for network speed"
+msgstr ""
+"Om bruke 10-tallsystemet (standard) eller 2-tallsystemet skal brukes for "
+"nettverkshastighet"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:105
+msgid ""
+"Whether to set graph max to interface max (false) or the max observed (true)"
+msgstr ""
+"Om grafen skal toppe ut utifra grensesnittets maksgrense (av) elller utifra "
+"det høyeste som har blitt observert (på)"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:110
+#: resources/ui/preferences/page.blp:105
+msgid "Parent and child process stats are shown individually or merged upwards"
+msgstr ""
+"Statistikk for overordnede og underordnede prosesser vises individuelt eller "
+"sammenslått oppover"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:115
+msgid "Column sorting is persisted across app restarts"
+msgstr "Kolonnesortering opprettholdes ved omstart av programmet"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:120
+msgid "Column order is persisted across app restarts"
+msgstr "Kolonnesortering opprettholdes ved omstart av programmet"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:125
+msgid ""
+"Show CPU usage for Apps and Processes scaled to the number of available cores"
+msgstr ""
+"Vis CPU-bruk for programmer og prosesser skalert til antall tilgjengelige "
+"kjerner"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:130
+msgid "Show a separator between each column in the Apps view"
+msgstr "Vis et skilletegn mellom kolonnene i programvisningen"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:135
+msgid "The column name by which the Apps page view is sorted"
+msgstr "Kolonnenavnet som programsiden sorteres etter"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:140
+msgid "The sorting direction of the Apps page view"
+msgstr "Sorteringsretning for program-sidevisningen"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:145
+msgid "The order of columns in the Apps page view"
+msgstr "Sorteringsretning for program-sidevisningen"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:150
+msgid "The column name by which the Services page view is sorted"
+msgstr "Kolonnenavnet som Tjenester-siden sorteres etter"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:155
+msgid "The sorting direction of the Services page view"
+msgstr "Sorteringsretning i Tjenester-sidevisningen"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:160
+msgid "The order of columns in the Services page view"
+msgstr "Kolonnerekkefølgen i Tjenester-sidevisningen"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:166
+msgid "Which graph is shown on the CPU performance page"
+msgstr "Hvilken graf vises på CPU-ytelsessiden"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:171
+msgid "Show kernel times in the CPU graphs"
+msgstr "Vis kjerne(kernel)-tider i CPU-grafene"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:176
+msgid "Which page is shown on application startup, in the performance tab"
+msgstr "Hvilken side vises ved oppstart av programmet, i ytelsesfanen"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:182
+msgid "Should performance graphs be smooth or jagged"
+msgstr "Skal ytelsesgrafer være jevnet ut eller taggete"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:187
+msgid "Should graphs be animated"
+msgstr "Om grafer skal animeres"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:192
+#: resources/ui/preferences/page.blp:65
+msgid "Show CPU information by default"
+msgstr "Vis CPU-informasjon som standard"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:197
+#: resources/ui/preferences/page.blp:71
+msgid "Show memory information by default"
+msgstr "Vis minneinformasjon som standard"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:202
+#: resources/ui/preferences/page.blp:77
+msgid "Show disk information by default"
+msgstr "Vis diskinformasjon som standard"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:207
+#: resources/ui/preferences/page.blp:83
+msgid "Show network information by default"
+msgstr "Vis nettverksinformasjon som standard"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:212
+#: resources/ui/preferences/page.blp:89
+msgid "Show GPU information by default"
+msgstr "Vis GPU-informasjon som standard"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:217
+#: resources/ui/preferences/page.blp:95
+msgid "Show fan information by default"
+msgstr "Vis vifteinformasjon som standard"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:222
+msgid "Show the mem composition widget"
+msgstr "Vis widgeten for minnesammensetning"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:227
+msgid "Show the swap graph"
+msgstr "Vis grafen for swapfilen"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:232
+msgid "Show the gpu encode-decode graph"
+msgstr "Vis graf over GPU-koding og -dekoding"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:237
+msgid "The ordering of entries in the application sidebar"
+msgstr "Rekkefølgen på oppføringene i sidepanelet"
+
+#: data/io.missioncenter.MissionCenter.gschema.xml:242
+msgid "Graphs that should be hidden in the application sidebar"
+msgstr "Grafer som skal være skjult i sidepanelet"
+
+#: resources/ui/apps_page/details_dialog.blp:76
+#: resources/ui/process_column_view/column_view_frame.blp:48
+#: resources/ui/process_column_view/process_details_dialog.blp:76
+msgid "PID"
+msgstr "PID"
+
+#: resources/ui/apps_page/details_dialog.blp:87
+#: resources/ui/apps_page/details_dialog.blp:115
+#: resources/ui/process_column_view/process_details_dialog.blp:95
+#: resources/ui/process_column_view/process_details_dialog.blp:123
+#: resources/ui/process_column_view/service_details_dialog.blp:250
+#: resources/ui/process_column_view/service_details_dialog.blp:282
+#: resources/ui/process_column_view/service_details_dialog.blp:314
+#: src/performance_page/widgets/smart_data_dialog.rs:201
+#: src/performance_page/widgets/smart_data_dialog.rs:209
+#: src/performance_page/widgets/smart_data_dialog.rs:217
+#: src/performance_page/widgets/smart_data_dialog.rs:225
+#: src/performance_page/widgets/smart_data_dialog.rs:236
+#: src/performance_page/widgets/smart_data_dialog.rs:244
+#: src/performance_page/widgets/smart_data_dialog.rs:252
+#: src/performance_page/widgets/smart_data_dialog.rs:260
+#: src/performance_page/widgets/smart_data_dialog.rs:268
+#: src/performance_page/widgets/smart_data_dialog.rs:276
+#: src/performance_page/widgets/smart_data_dialog.rs:285
+#: src/performance_page/widgets/smart_data_dialog.rs:293
+#: src/performance_page/widgets/smart_data_dialog.rs:301
+#: src/performance_page/widgets/smart_data_dialog.rs:309
+#: src/performance_page/widgets/smart_data_dialog.rs:317
+#: src/performance_page/widgets/smart_sata_dialog_row.rs:102
+#: src/performance_page/cpu.rs:371 src/performance_page/cpu.rs:380
+#: src/performance_page/cpu.rs:389 src/performance_page/cpu.rs:398
+#: src/performance_page/network.rs:457 src/performance_page/network.rs:465
+#: src/process_tree/service_details_dialog.rs:254
+#: src/process_tree/service_details_dialog.rs:262
+#: src/process_tree/service_details_dialog.rs:270
+msgid "N/A"
+msgstr "I/T"
+
+#: resources/ui/apps_page/details_dialog.blp:104
+#: resources/ui/performance_page/disk_smart_data_dialog.blp:205
+#: resources/ui/process_column_view/process_details_dialog.blp:112
+msgid "Type"
+msgstr "Type"
+
+#: resources/ui/apps_page/details_dialog.blp:132
+#: resources/ui/process_column_view/process_details_dialog.blp:140
+msgid "Command Line"
+msgstr "Kommandolinje"
+
+#: resources/ui/apps_page/details_dialog.blp:154
+#: resources/ui/process_column_view/process_details_dialog.blp:162
+msgid "Resource Usage"
+msgstr "Resursbruk"
+
+#: resources/ui/apps_page/details_dialog.blp:168
+#: resources/ui/performance_page/cpu.blp:45
+#: resources/ui/process_column_view/column_view_frame.blp:54
+#: resources/ui/process_column_view/process_details_dialog.blp:176
+#: src/performance_page/mod.rs:980 src/process_tree/column_view_frame.rs:539
+msgid "CPU"
+msgstr "Prosessor"
+
+#: resources/ui/apps_page/details_dialog.blp:193
+#: resources/ui/performance_page/memory.blp:41
+#: resources/ui/process_column_view/column_view_frame.blp:60
+#: resources/ui/process_column_view/process_details_dialog.blp:201
+#: src/performance_page/mod.rs:1044 src/process_tree/column_view_frame.rs:560
+msgid "Memory"
+msgstr "Minne"
+
+#: resources/ui/apps_page/details_dialog.blp:218
+#: resources/ui/process_column_view/process_details_dialog.blp:226
+msgid "Shared Memory"
+msgstr "Delt minne"
+
+#: resources/ui/apps_page/details_dialog.blp:243
+#: resources/ui/process_column_view/process_details_dialog.blp:251
+msgid "Drives"
+msgstr "Disker"
+
+#: resources/ui/apps_page/details_dialog.blp:268
+#: resources/ui/process_column_view/column_view_frame.blp:78
+#: resources/ui/process_column_view/process_details_dialog.blp:276
+#: src/process_tree/column_view_frame.rs:579
+#: src/process_tree/column_view_frame.rs:588
+msgid "Network"
+msgstr "Nettverk"
+
+#: resources/ui/apps_page/details_dialog.blp:293
+#: resources/ui/process_column_view/column_view_frame.blp:84
+#: resources/ui/process_column_view/process_details_dialog.blp:301
+#: src/performance_page/gpu.rs:358 src/performance_page/mod.rs:1397
+#: src/performance_page/mod.rs:2159 src/process_tree/column_view_frame.rs:594
+#: src/process_tree/column_view_frame.rs:611
+msgid "GPU"
+msgstr "GPU"
+
+#: resources/ui/apps_page/details_dialog.blp:318
+#: resources/ui/process_column_view/column_view_frame.blp:90
+#: resources/ui/process_column_view/process_details_dialog.blp:326
+#: src/process_tree/column_view_frame.rs:598
+#: src/process_tree/column_view_frame.rs:617
+msgid "GPU Memory"
+msgstr "Grafikkminne"
+
+#: resources/ui/apps_page/page.blp:75
+msgid "Collapse all apps and processes"
+msgstr "Slå sammen alle programmer og prosesser"
+
+#: resources/ui/apps_page/page.blp:87 resources/ui/services_page/page.blp:94
+#: resources/ui/keyboard_shortcuts.blp:112
+msgid "Collapse All"
+msgstr "Slå sammen alle"
+
+#: resources/ui/performance_page/disk_eject_failure_dialog.blp:25
+msgid "Failed To Eject"
+msgstr "Kunne ikke løse ut"
+
+#: resources/ui/performance_page/disk_eject_failure_row.blp:51
+msgid "Kill"
+msgstr "Deaktiver"
+
+#: resources/ui/performance_page/memory_info_tooltip.blp:31
+msgid "In Use:"
+msgstr "I bruk:"
+
+#: resources/ui/performance_page/memory_info_tooltip.blp:36
+msgid "Modified:"
+msgstr "Modifisert:"
+
+#: resources/ui/performance_page/memory_info_tooltip.blp:41
+msgid "Standby:"
+msgstr ""
+
+#: resources/ui/performance_page/memory_info_tooltip.blp:46
+msgid "Free:"
+msgstr "Ledig:"
+
+#: resources/ui/performance_page/cpu.blp:63
+#: resources/ui/performance_page/gpu.blp:72
+msgid "Utilization over "
+msgstr "Utnyttelse over "
+
+#: resources/ui/performance_page/cpu.blp:78
+#: resources/ui/performance_page/gpu.blp:86
+#: resources/ui/performance_page/gpu.blp:135
+msgid "100%"
+msgstr "100%"
+
+#: resources/ui/performance_page/cpu.blp:106
+msgid "Change G_raph To"
+msgstr "Endre _diagram til"
+
+#: resources/ui/performance_page/cpu.blp:109
+msgid "Overall U_tilization"
+msgstr "Samlet u_tnyttelse"
+
+#: resources/ui/performance_page/cpu.blp:114
+msgid "Logical _Processors"
+msgstr "Logiske _prosessorer"
+
+#: resources/ui/performance_page/cpu.blp:120
+msgid "Show Kernel Times"
+msgstr "Vis kjerne(kernel)-tider"
+
+#: resources/ui/performance_page/cpu.blp:127
+#: resources/ui/performance_page/disk.blp:182
+#: resources/ui/performance_page/fan.blp:158
+#: resources/ui/performance_page/gpu.blp:215
+#: resources/ui/performance_page/memory.blp:207
+#: resources/ui/performance_page/network.blp:105
+msgid "Graph _Summary View"
+msgstr "Diagram_sammendragsvisning"
+
+#: resources/ui/performance_page/cpu.blp:132
+#: resources/ui/performance_page/disk.blp:187
+#: resources/ui/performance_page/fan.blp:163
+#: resources/ui/performance_page/gpu.blp:220
+#: resources/ui/performance_page/memory.blp:212
+#: resources/ui/performance_page/network.blp:110
+msgid "_View"
+msgstr "_Vis"
+
+#: resources/ui/performance_page/cpu.blp:135
+#: resources/ui/performance_page/disk.blp:190
+#: resources/ui/performance_page/fan.blp:166
+#: resources/ui/performance_page/gpu.blp:223
+#: resources/ui/performance_page/memory.blp:215
+#: resources/ui/performance_page/network.blp:113
+msgid "CP_U"
+msgstr "_Prosessor"
+
+#: resources/ui/performance_page/cpu.blp:140
+#: resources/ui/performance_page/disk.blp:195
+#: resources/ui/performance_page/fan.blp:171
+#: resources/ui/performance_page/gpu.blp:228
+#: resources/ui/performance_page/memory.blp:220
+#: resources/ui/performance_page/network.blp:118
+msgid "_Memory"
+msgstr "_Minne"
+
+#: resources/ui/performance_page/cpu.blp:145
+#: resources/ui/performance_page/disk.blp:200
+#: resources/ui/performance_page/fan.blp:176
+#: resources/ui/performance_page/gpu.blp:233
+#: resources/ui/performance_page/memory.blp:225
+#: resources/ui/performance_page/network.blp:123
+msgid "_Drive"
+msgstr "_Stasjon"
+
+#: resources/ui/performance_page/cpu.blp:150
+#: resources/ui/performance_page/disk.blp:205
+#: resources/ui/performance_page/fan.blp:181
+#: resources/ui/performance_page/gpu.blp:238
+#: resources/ui/performance_page/memory.blp:230
+#: resources/ui/performance_page/network.blp:128
+msgid "_Network"
+msgstr "_Nettverk"
+
+#: resources/ui/performance_page/cpu.blp:155
+#: resources/ui/performance_page/disk.blp:210
+#: resources/ui/performance_page/fan.blp:186
+#: resources/ui/performance_page/gpu.blp:243
+#: resources/ui/performance_page/memory.blp:235
+#: resources/ui/performance_page/network.blp:133
+msgid "_GPU"
+msgstr "_Grafikk"
+
+#: resources/ui/performance_page/cpu.blp:160
+#: resources/ui/performance_page/disk.blp:215
+#: resources/ui/performance_page/fan.blp:191
+#: resources/ui/performance_page/gpu.blp:248
+#: resources/ui/performance_page/memory.blp:240
+#: resources/ui/performance_page/network.blp:138
+msgid "_Fan"
+msgstr "_Vifte"
+
+#: resources/ui/performance_page/cpu.blp:168
+#: resources/ui/performance_page/disk.blp:223
+#: resources/ui/performance_page/fan.blp:199
+#: resources/ui/performance_page/gpu.blp:256
+#: resources/ui/performance_page/memory.blp:248
+#: resources/ui/performance_page/network.blp:151
+msgid "_Copy"
+msgstr "_Kopier"
+
+#: resources/ui/performance_page/disk.blp:66
+msgid "Show SMART Data"
+msgstr "Vis SMART-data"
+
+#: resources/ui/performance_page/disk.blp:77
+msgid "Eject Disk"
+msgstr "Løs ut disk"
+
+#: resources/ui/performance_page/disk.blp:99
+msgid "Active time over "
+msgstr "Aktiv tid over "
+
+#: resources/ui/performance_page/disk.blp:140
+#: resources/ui/performance_page/network.blp:61
+msgid "Throughput over "
+msgstr "Dataoverføring over "
+
+#: resources/ui/performance_page/fan.blp:61
+msgid "Fan speed over "
+msgstr "Viftehastighet over "
+
+#: resources/ui/performance_page/fan.blp:112
+msgid "Temperature over "
+msgstr "Temperatur over "
+
+#: resources/ui/performance_page/fan_details.blp:59
+msgid "Fan Speed"
+msgstr "Viftehastighet"
+
+#: resources/ui/performance_page/fan_details.blp:98
+msgid "PWM Percentage"
+msgstr "PWM-prosent"
+
+#: resources/ui/performance_page/fan_details.blp:125
+msgid "Current Temperature"
+msgstr "Gjeldende temperatur"
+
+#: resources/ui/performance_page/gpu.blp:119
+msgid "Video encode/decode utilization over "
+msgstr "Utnyttelse av videokoding/dekoding over "
+
+#: resources/ui/performance_page/gpu.blp:162
+#: resources/ui/performance_page/memory.blp:76
+msgid "Memory usage over "
+msgstr "Minnebruk over "
+
+#: resources/ui/performance_page/gpu.blp:208
+msgid "Show Encode/Decode Usage"
+msgstr "Vis bruk av koding/dekoding"
+
+#: resources/ui/performance_page/memory.blp:121
+msgid "Swap usage over "
+msgstr "Bruk av swapfil over "
+
+#: resources/ui/performance_page/memory.blp:172
+msgid "Memory composition"
+msgstr "Minnesammensetning"
+
+#: resources/ui/performance_page/memory.blp:196
+msgid "Show Memory Composition"
+msgstr "Vis minnesammensetning"
+
+#: resources/ui/performance_page/memory.blp:200
+msgid "Show Swap Usage"
+msgstr "Vis bruk av swapfil"
+
+#: resources/ui/performance_page/memory_details.blp:58
+msgid "In use"
+msgstr "I bruk"
+
+#: resources/ui/performance_page/memory_details.blp:87
+msgid "Available"
+msgstr "Tilgjengelig"
+
+#: resources/ui/performance_page/memory_details.blp:129
+msgid "Committed"
+msgstr "Tildelt"
+
+#: resources/ui/performance_page/memory_details.blp:159
+msgid "Cached"
+msgstr "Hurtiglagret"
+
+#: resources/ui/performance_page/memory_details.blp:190
+msgid "Swap used"
+msgstr "Swap i bruk"
+
+#: resources/ui/performance_page/memory_details.blp:221
+msgid "Swap available"
+msgstr "Tilgjengelig swap"
+
+#: resources/ui/performance_page/memory_details.blp:246
+msgid "Speed:"
+msgstr "Hastighet:"
+
+#: resources/ui/performance_page/memory_details.blp:260
+msgid "Slots used:"
+msgstr "Plasser brukt:"
+
+#: resources/ui/performance_page/memory_details.blp:274
+msgid "Form factor:"
+msgstr "Formfaktor:"
+
+#: resources/ui/performance_page/memory_details.blp:288
+#: resources/ui/performance_page/disk_details.blp:284
+msgid "Type:"
+msgstr "Type:"
+
+#: resources/ui/performance_page/network.blp:144
+msgid "Network Se_ttings"
+msgstr "Nettverks_innstillinger"
+
+#: resources/ui/performance_page/network_details.blp:63
+msgid "Receive"
+msgstr "Mottas"
+
+#: resources/ui/performance_page/network_details.blp:101
+msgid "Send"
+msgstr "Sendes"
+
+#: resources/ui/performance_page/network_details.blp:130
+msgid "Total Received"
+msgstr "Totalt mottatt"
+
+#: resources/ui/performance_page/network_details.blp:159
+msgid "Total Sent"
+msgstr "Totalt sendt"
+
+#: resources/ui/performance_page/network_details.blp:184
+msgid "Interface name:"
+msgstr "Grensesnittsnavn:"
+
+#: resources/ui/performance_page/network_details.blp:198
+msgid "Connection type:"
+msgstr "Tilkoblingstype:"
+
+#: resources/ui/performance_page/network_details.blp:213
+msgid "SSID:"
+msgstr "SSID:"
+
+#: resources/ui/performance_page/network_details.blp:228
+msgid "Signal strength:"
+msgstr "Signalstyrke:"
+
+#: resources/ui/performance_page/network_details.blp:243
+msgid "Maximum Bitrate:"
+msgstr "Maksimal bitrate:"
+
+#: resources/ui/performance_page/network_details.blp:258
+msgid "Frequency:"
+msgstr "Frekvens:"
+
+#: resources/ui/performance_page/network_details.blp:272
+msgid "Hardware address:"
+msgstr "Maskinvareadresse:"
+
+#: resources/ui/performance_page/network_details.blp:401
+msgid "IPv4 address:"
+msgstr "IPv4-adresse:"
+
+#: resources/ui/performance_page/network_details.blp:427
+msgid "IPv6 address:"
+msgstr "IPv6-adresse:"
+
+#: resources/ui/performance_page/disk_smart_data_dialog.blp:33
+msgid "Smart Data"
+msgstr "S.M.A.R.T.-data"
+
+#: resources/ui/performance_page/disk_smart_data_dialog.blp:48
+msgid "Last Updated"
+msgstr "Sist oppdatert"
+
+#: resources/ui/performance_page/disk_smart_data_dialog.blp:72
+msgid "Powered On"
+msgstr "Skrudd på"
+
+#: resources/ui/performance_page/disk_smart_data_dialog.blp:96
+msgid "Drive Health"
+msgstr "Disktilstand"
+
+#: resources/ui/performance_page/disk_smart_data_dialog.blp:120
+msgid "SMART Test Status"
+msgstr "S.M.A.R.T.-teststatus"
+
+#: resources/ui/performance_page/disk_smart_data_dialog.blp:149
+#: resources/ui/performance_page/disk_smart_data_dialog.blp:174
+msgid "Attribute"
+msgstr "Atributt"
+
+#: resources/ui/performance_page/disk_smart_data_dialog.blp:156
+#: resources/ui/performance_page/disk_smart_data_dialog.blp:181
+msgid "Value"
+msgstr "Verdi"
+
+#: resources/ui/performance_page/disk_smart_data_dialog.blp:168
+msgid "ID"
+msgstr "ID"
+
+#: resources/ui/performance_page/disk_smart_data_dialog.blp:187
+msgid "Normalized"
+msgstr "Normalisert"
+
+#: resources/ui/performance_page/disk_smart_data_dialog.blp:193
+msgid "Threshold"
+msgstr "Terskel"
+
+#: resources/ui/performance_page/disk_smart_data_dialog.blp:199
+msgid "Worst"
+msgstr "På sitt verste"
+
+#: resources/ui/performance_page/disk_smart_data_dialog.blp:211
+msgid "Updates"
+msgstr "Oppdateringer"
+
+#: resources/ui/performance_page/disk_smart_data_dialog.blp:217
+msgid "Assessment"
+msgstr "Vurdering"
+
+#: resources/ui/performance_page/gpu_details.blp:51
+#: resources/ui/performance_page/cpu_details.blp:46
+msgid "Utilization"
+msgstr "Bruk"
+
+#: resources/ui/performance_page/gpu_details.blp:80
+msgid "Clock Speed"
+msgstr "Klokkehastighet"
+
+#: resources/ui/performance_page/gpu_details.blp:132
+#: resources/ui/performance_page/cpu_details.blp:91
+msgid "Power Draw"
+msgstr "Strømforbruk"
+
+#: resources/ui/performance_page/gpu_details.blp:200
+#: src/performance_page/gpu.rs:552
+msgid "Memory Usage"
+msgstr "Minnebruk"
+
+#: resources/ui/performance_page/gpu_details.blp:274
+#: src/performance_page/gpu.rs:629
+msgid "Shared Memory Usage"
+msgstr "Delt minnebruk"
+
+#: resources/ui/performance_page/gpu_details.blp:332
+msgid "Memory Speed"
+msgstr "Minnehastighet"
+
+#: resources/ui/performance_page/gpu_details.blp:407
+msgid "Video encode"
+msgstr "Videokoding"
+
+#: resources/ui/performance_page/gpu_details.blp:453
+msgid "Video decode"
+msgstr "Videodekoding"
+
+#: resources/ui/performance_page/gpu_details.blp:483
+msgid "Temperature"
+msgstr "Temperatur"
+
+#: resources/ui/performance_page/gpu_details.blp:514
+msgid "OpenGL version:"
+msgstr "OpenGL-versjon:"
+
+#: resources/ui/performance_page/gpu_details.blp:530
+msgid "Vulkan version:"
+msgstr "Vulkan-versjon:"
+
+#: resources/ui/performance_page/gpu_details.blp:548
+msgid "PCI Express speed:"
+msgstr "PCI Express-hastighet:"
+
+#: resources/ui/performance_page/gpu_details.blp:566
+msgid "Max PCI Express speed:"
+msgstr "Max PCI Express-hastighet:"
+
+#: resources/ui/performance_page/gpu_details.blp:582
+msgid "PCI bus address:"
+msgstr "PCI-buss-adresse:"
+
+#: resources/ui/performance_page/disk_smart_failure_dialog.blp:25
+msgid "Failed To Get SMART Data"
+msgstr "Kunne ikke få tak i SMART-data"
+
+#: resources/ui/performance_page/disk_smart_failure_dialog.blp:31
+msgid ""
+"There was a problem fetching SMART data. Try running from the command line "
+"to get more information."
+msgstr ""
+"Det oppsto et problem under hentingen av SMART-data. Prøv å bruke "
+"kommandolinjen for å få mer informasjon."
+
+#: resources/ui/performance_page/disk_details.blp:63
+msgid "Read speed"
+msgstr "Lesehastighet"
+
+#: resources/ui/performance_page/disk_details.blp:101
+msgid "Write speed"
+msgstr "Skrivehastighet"
+
+#: resources/ui/performance_page/disk_details.blp:130
+msgid "Total Read"
+msgstr "Totalt lest"
+
+#: resources/ui/performance_page/disk_details.blp:159
+msgid "Total Written"
+msgstr "Totalt skrevet"
+
+#: resources/ui/performance_page/disk_details.blp:188
+msgid "Active time"
+msgstr "Tid aktiv"
+
+#: resources/ui/performance_page/disk_details.blp:217
+msgid "Avg. response time"
+msgstr "Gjennomsnittlig svartid"
+
+#: resources/ui/performance_page/disk_details.blp:242
+msgid "Capacity:"
+msgstr "Kapasitet:"
+
+#: resources/ui/performance_page/disk_details.blp:256
+msgid "Formatted:"
+msgstr "Formatert:"
+
+#: resources/ui/performance_page/disk_details.blp:270
+msgid "System disk:"
+msgstr "Systemdisk:"
+
+#: resources/ui/performance_page/disk_details.blp:300
+msgid "WWN:"
+msgstr "WWN:"
+
+#: resources/ui/performance_page/disk_details.blp:316
+msgid "Serial:"
+msgstr "Seriell:"
+
+#: resources/ui/performance_page/disk_details.blp:332
+msgid "Rotation Rate"
+msgstr "Rotasjonshastighet"
+
+#: resources/ui/performance_page/cpu_details.blp:68
+msgid "Speed"
+msgstr "Hastighet"
+
+#: resources/ui/performance_page/cpu_details.blp:117 src/apps_page/mod.rs:84
+msgid "Processes"
+msgstr "Prosesser"
+
+#: resources/ui/performance_page/cpu_details.blp:139
+msgid "Threads"
+msgstr "Tråder"
+
+#: resources/ui/performance_page/cpu_details.blp:161
+msgid "Handles"
+msgstr "Referanser"
+
+#: resources/ui/performance_page/cpu_details.blp:184
+msgid "Up time"
+msgstr "Oppetid"
+
+#: resources/ui/performance_page/cpu_details.blp:207
+msgid "Base Speed:"
+msgstr "Grunnhastighet:"
+
+#: resources/ui/performance_page/cpu_details.blp:221
+msgid "Sockets:"
+msgstr "Sokler:"
+
+#: resources/ui/performance_page/cpu_details.blp:235
+msgid "Virtual processors:"
+msgstr "Virtuelle prosessorer:"
+
+#: resources/ui/performance_page/cpu_details.blp:249
+msgid "Virtualization:"
+msgstr "Virtualisering:"
+
+#: resources/ui/performance_page/cpu_details.blp:263
+msgid "Virtual machine:"
+msgstr "Virtuell maskin:"
+
+#: resources/ui/performance_page/cpu_details.blp:277
+msgid "L1 cache:"
+msgstr "L1-hurtiglager:"
+
+#: resources/ui/performance_page/cpu_details.blp:291
+msgid "L2 cache:"
+msgstr "L2-hurtiglager:"
+
+#: resources/ui/performance_page/cpu_details.blp:305
+msgid "L3 cache:"
+msgstr "L3-hurtiglager:"
+
+#: resources/ui/performance_page/cpu_details.blp:319
+msgid "Cpufreq driver:"
+msgstr "Cpufreq-driver:"
+
+#: resources/ui/performance_page/cpu_details.blp:333
+msgid "Cpufreq governor:"
+msgstr "Cpufreq-guvernør:"
+
+#: resources/ui/performance_page/cpu_details.blp:347
+msgid "Power preference:"
+msgstr "Strømpreferanse:"
+
+#: resources/ui/preferences/page.blp:6
+msgid "General"
+msgstr "Generelt"
+
+#: resources/ui/preferences/page.blp:9
+msgid "Update Interval"
+msgstr "Oppdateringsintervall"
+
+#: resources/ui/preferences/page.blp:10
+msgid "In seconds"
+msgstr "I sekunder"
+
+#: resources/ui/preferences/page.blp:27
+msgid "Chart Data Points"
+msgstr "Diagramdatapunkter"
+
+#: resources/ui/preferences/page.blp:46 resources/ui/keyboard_shortcuts.blp:68
+msgid "Performance Page"
+msgstr "Ytelsesside"
+
+#: resources/ui/preferences/page.blp:49
+msgid "Smooth Graphs"
+msgstr "Jevne grafer"
+
+#: resources/ui/preferences/page.blp:50
+msgid "Draw graphs as smooth line instead of jagged line"
+msgstr "Tegn grafer som utjevnet linje i stedet for som taggete linje"
+
+#: resources/ui/preferences/page.blp:54
+msgid "Sliding Graphs"
+msgstr "Glidende grafer"
+
+#: resources/ui/preferences/page.blp:55
+msgid "Animate graphs (may negatively impact performance)"
+msgstr "Animer grafer (kan gi dårlig ytelse)"
+
+#: resources/ui/preferences/page.blp:59
+msgid "Scale Network Graphs Dynamically"
+msgstr "Skaler nettverksgrafene dynamisk"
+
+#: resources/ui/preferences/page.blp:60
+msgid ""
+"Set network graph to scale dynamically with actual usage or with channel max "
+"speed"
+msgstr ""
+"Sett nettverksgrafen til å skalere seg dynamisk med faktisk bruk eller med "
+"kanalens maksimale hastighet"
+
+#: resources/ui/preferences/page.blp:64
+msgid "Show CPU Information"
+msgstr "Vis CPU-informasjon"
+
+#: resources/ui/preferences/page.blp:70
+msgid "Show Memory Information"
+msgstr "Vis minneinformasjon"
+
+#: resources/ui/preferences/page.blp:76
+msgid "Show Disk Information"
+msgstr "Vis diskinformasjon"
+
+#: resources/ui/preferences/page.blp:82
+msgid "Show Network Information"
+msgstr "Vis nettverksinformasjon"
+
+#: resources/ui/preferences/page.blp:88
+msgid "Show GPU Information"
+msgstr "Vis GPU-informasjon"
+
+#: resources/ui/preferences/page.blp:94
+msgid "Show Fan Information"
+msgstr "Vis vifteinformasjon"
+
+#: resources/ui/preferences/page.blp:101
+msgid "App &amp; Service Pages"
+msgstr "App &amp; Tjenestesider"
+
+#: resources/ui/preferences/page.blp:104
+msgid "Merge Process Stats"
+msgstr "Slå sammen prosessstatistikk"
+
+#: resources/ui/preferences/page.blp:109
+msgid "Remember Sorting"
+msgstr "Husk sortering"
+
+#: resources/ui/preferences/page.blp:110
+msgid "Persist sorting by column across app restarts"
+msgstr "Husk kolonnesorteringen ved omstart av programmet"
+
+#: resources/ui/preferences/page.blp:114
+msgid "Remember Column Order"
+msgstr "Husk kolonnerekkefølge"
+
+#: resources/ui/preferences/page.blp:115
+msgid "Persist the order of the columns, across app restarts"
+msgstr "Husk kolonnesorteringen ved omstart av programmet"
+
+#: resources/ui/preferences/page.blp:119
+msgid "Scale CPU Usage to Core Count"
+msgstr "Skaler CPU-bruk til kjerneantall"
+
+#: resources/ui/preferences/page.blp:120
+msgid "Show CPU usage scaled to the number of available cores"
+msgstr "Vis CPU-bruk skalert til antall tilgjengelige kjerner"
+
+#: resources/ui/preferences/page.blp:124
+msgid "Show Column Separators"
+msgstr "Vis skilletegn mellom kolonner"
+
+#: resources/ui/preferences/page.blp:125
+msgid "Show a separator between each column"
+msgstr "Vis et skilletegn mellom kolonnene"
+
+#: resources/ui/preferences/page.blp:130
+msgid "Global Units"
+msgstr "Globale enheter"
+
+#: resources/ui/preferences/page.blp:133
+msgid "Memory Usage Unit"
+msgstr "Minnebruksenhet"
+
+#: resources/ui/preferences/page.blp:140
+msgid "Use Bytes as a Unit of Measurement for Memory"
+msgstr "Bruk byte som måleenhet for minne"
+
+#: resources/ui/preferences/page.blp:141 resources/ui/preferences/page.blp:179
+#: resources/ui/preferences/page.blp:217
+msgid "Bytes"
+msgstr "Byte"
+
+#: resources/ui/preferences/page.blp:145
+msgid "Use Bits as a Unit of Measurement for Memory"
+msgstr "Bruk bits som måleenhet for minne"
+
+#: resources/ui/preferences/page.blp:146 resources/ui/preferences/page.blp:184
+#: resources/ui/preferences/page.blp:222
+msgid "Bits"
+msgstr "Bits"
+
+#: resources/ui/preferences/page.blp:152
+msgid "Memory Usage Base"
+msgstr "Tallsystem for minnebruk"
+
+#: resources/ui/preferences/page.blp:159
+msgid "Use Base 10 for Memory"
+msgstr "Bruk 10-tallsystemet for minne"
+
+#: resources/ui/preferences/page.blp:160 resources/ui/preferences/page.blp:198
+#: resources/ui/preferences/page.blp:236
+msgid "Base 10"
+msgstr "10-tallsystemet"
+
+#: resources/ui/preferences/page.blp:164
+msgid "Use Base 2 for Memory"
+msgstr "Bruk 2-tallsystemet"
+
+#: resources/ui/preferences/page.blp:165 resources/ui/preferences/page.blp:203
+#: resources/ui/preferences/page.blp:241
+msgid "Base 2"
+msgstr "2-tallsystemet"
+
+#: resources/ui/preferences/page.blp:171
+msgid "Drive Usage Unit"
+msgstr "Enhet for disker"
+
+#: resources/ui/preferences/page.blp:178
+msgid "Use Bytes as a Unit of Measurement for Disk Drives"
+msgstr "Bruk byte som måleenhet for disker"
+
+#: resources/ui/preferences/page.blp:183
+msgid "Use Bits as a Unit of Measurement for Disk Drives"
+msgstr "Bruk bits som måleenhet for disker"
+
+#: resources/ui/preferences/page.blp:190
+msgid "Drive Usage Base"
+msgstr "Tallsystem for disker"
+
+#: resources/ui/preferences/page.blp:197
+msgid "Use Base 10 for Disk Drives"
+msgstr "Bruk 10-tallsystemet for disker"
+
+#: resources/ui/preferences/page.blp:202
+msgid "Use Base 2 for Disk Drives"
+msgstr "Bruk 2-tallsystemet for disker"
+
+#: resources/ui/preferences/page.blp:209
+msgid "Network Usage Unit"
+msgstr "Enhet for nettverksbruk"
+
+#: resources/ui/preferences/page.blp:216
+msgid "Use Bytes as a Unit of Measurement for Network Interfaces"
+msgstr "Bruk byte som måleenhet for nettverksgrensesnitt"
+
+#: resources/ui/preferences/page.blp:221
+msgid "Use Bits as a Unit of Measurement for Network Interfaces"
+msgstr "Bruk bit som måleenhet for nettverksgrensesnitt"
+
+#: resources/ui/preferences/page.blp:228
+msgid "Network Usage Base"
+msgstr "Tallsystem for nettverk"
+
+#: resources/ui/preferences/page.blp:235
+msgid "Use Base 10 for Network Interfaces"
+msgstr "Bruk 10-tallsystemet for nettverksgrensesnitt"
+
+#: resources/ui/preferences/page.blp:240
+msgid "Use Base 2 for Network Interfaces"
+msgstr "Bruk 2-tallsystemet for nettverksgrensensitt"
+
+#: resources/ui/services_page/page.blp:84
+msgid "Collapse all expanded services"
+msgstr "Slå sammen alle utvidede tjenester"
+
+#: resources/ui/services_page/page.blp:123
+msgid "Filter running processes"
+msgstr "Filtrer kjørende prosesser"
+
+#: resources/ui/services_page/page.blp:143
+msgid "Filter failed processes"
+msgstr "Filtrer mislykkede prosesser"
+
+#: resources/ui/services_page/page.blp:163
+msgid "Filter stopped processes"
+msgstr "Filtrer avsluttede prosesser"
+
+#: resources/ui/services_page/page.blp:183
+msgid "Filter disabled processes"
+msgstr "Filtrer deaktiverte prosesser"
+
+#: resources/ui/services_page/page.blp:204
+msgid "Remove all filters"
+msgstr "Fjern alle filtre"
+
+#: resources/ui/services_page/page.blp:214
+msgid "Remove Filters"
+msgstr "Fjern filtre"
+
+#: resources/ui/widgets/theme_selector.blp:18
+#: resources/ui/widgets/theme_selector.blp:21
+msgid "Follow system style"
+msgstr "Bruk systemstil"
+
+#: resources/ui/widgets/theme_selector.blp:35
+#: resources/ui/widgets/theme_selector.blp:38
+msgid "Light style"
+msgstr "Lysmodus"
+
+#: resources/ui/widgets/theme_selector.blp:53
+#: resources/ui/widgets/theme_selector.blp:56
+msgid "Dark style"
+msgstr "Mørkmodus"
+
+#: resources/ui/keyboard_shortcuts.blp:5
+msgid "Keyboard Shortcuts"
+msgstr "Tastatursnarveier"
+
+#: resources/ui/keyboard_shortcuts.blp:10
+msgid "Global"
+msgstr "Global"
+
+#: resources/ui/keyboard_shortcuts.blp:21
+msgid "Open Menu"
+msgstr "Åpne meny"
+
+#: resources/ui/keyboard_shortcuts.blp:26
+#: resources/ui/keyboard_shortcuts.blp:31
+msgid "Close Window"
+msgstr "Lukk vindu"
+
+#: resources/ui/keyboard_shortcuts.blp:36
+msgid "Open Preferences"
+msgstr "Åpne innstillinger"
+
+#: resources/ui/keyboard_shortcuts.blp:41
+msgid "Show Keyboard Shortcuts"
+msgstr "Vis tastatursnarveier"
+
+#: resources/ui/keyboard_shortcuts.blp:46
+msgid "Show Performance Page"
+msgstr "Vis ytelsessiden"
+
+#: resources/ui/keyboard_shortcuts.blp:51
+msgid "Show Apps Page"
+msgstr "Vis programside"
+
+#: resources/ui/keyboard_shortcuts.blp:56
+msgid "Show Services Page"
+msgstr "Vis tjenesteside"
+
+#: resources/ui/keyboard_shortcuts.blp:61 resources/ui/window.blp:95
+msgid "Toggle Sidebar"
+msgstr "Vis eller skjul sidepanelet"
+
+#: resources/ui/keyboard_shortcuts.blp:79
+msgid "Copy Device Information"
+msgstr "Kopier enhetsinformasjon"
+
+#: resources/ui/keyboard_shortcuts.blp:84
+msgid "Toggle Summary Mode"
+msgstr "Vis eller skjul sidepanelene"
+
+#: resources/ui/keyboard_shortcuts.blp:89
+msgid "Select a Device"
+msgstr "Velg en enhet"
+
+#: resources/ui/keyboard_shortcuts.blp:96
+msgid "Apps Page"
+msgstr "Programside"
+
+#: resources/ui/keyboard_shortcuts.blp:107
+#: resources/ui/keyboard_shortcuts.blp:145 resources/ui/window.blp:143
+msgid "Search"
+msgstr "Søk"
+
+#: resources/ui/keyboard_shortcuts.blp:117
+msgid "Stop App or Process"
+msgstr "Stopp programmet eller prosessen"
+
+#: resources/ui/keyboard_shortcuts.blp:122
+msgid "Force Stop App or Process"
+msgstr "Tving programmet eller prosessen til å stoppe"
+
+#: resources/ui/keyboard_shortcuts.blp:127
+#: resources/ui/keyboard_shortcuts.blp:165
+msgid "Show Details Dialog"
+msgstr "Vis detaljer-dialogboksen"
+
+#: resources/ui/keyboard_shortcuts.blp:134
+msgid "Services Page"
+msgstr "Tjenesteside"
+
+#: resources/ui/keyboard_shortcuts.blp:150
+msgid "Start Service"
+msgstr "Start tjeneste"
+
+#: resources/ui/keyboard_shortcuts.blp:155
+msgid "Stop Service"
+msgstr "Stop tjeneste"
+
+#: resources/ui/keyboard_shortcuts.blp:160
+msgid "Restart Service"
+msgstr "Start tjeneste på nytt"
+
+#. The `Name` column should be default aligned
+#. The column that contains the context menu button should be default aligned
+#: resources/ui/process_column_view/column_view_frame.blp:41
+#: resources/ui/process_column_view/service_details_dialog.blp:134
+#: resources/ui/about_system_dialog.blp:80
+#: resources/ui/about_system_dialog.blp:260 src/process_tree/columns/mod.rs:208
+msgid "Name"
+msgstr "Navn"
+
+#: resources/ui/process_column_view/column_view_frame.blp:66
+msgid ""
+"Shared\n"
+"Memory"
+msgstr ""
+"Delt\n"
+"Minne"
+
+#: resources/ui/process_column_view/column_view_frame.blp:72
+#: src/performance_page/mod.rs:1131 src/process_tree/column_view_frame.rs:565
+#: src/process_tree/column_view_frame.rs:573
+msgid "Drive"
+msgstr "Stasjon"
+
+#: resources/ui/process_column_view/process_action_bar.blp:34
+msgid "Stop the selected app"
+msgstr "Avslutt det valgte programmet"
+
+#: resources/ui/process_column_view/process_action_bar.blp:46
+#: resources/ui/process_column_view/process_action_bar.blp:98
+#: resources/ui/process_column_view/service_action_bar.blp:66
+#: resources/ui/process_column_view/service_action_bar.blp:123
+msgid "Stop"
+msgstr "Stopp"
+
+#: resources/ui/process_column_view/process_action_bar.blp:53
+msgid "Force stop the selected app"
+msgstr "Tving det valgte programmet til å avslutte"
+
+#: resources/ui/process_column_view/process_action_bar.blp:65
+#: resources/ui/process_column_view/process_action_bar.blp:103
+msgid "Force Stop"
+msgstr "Tving prosessen til å stoppe"
+
+#: resources/ui/process_column_view/process_action_bar.blp:73
+msgid "Show details of the selected app"
+msgstr "Vis detaljene til det valgte programmet"
+
+#: resources/ui/process_column_view/process_action_bar.blp:85
+#: resources/ui/process_column_view/process_action_bar.blp:154
+#: resources/ui/process_column_view/service_action_bar.blp:105
+#: resources/ui/process_column_view/service_action_bar.blp:135
+msgid "Details"
+msgstr "Detaljer"
+
+#: resources/ui/process_column_view/process_action_bar.blp:108
+msgid "Send Signal"
+msgstr "Send signal"
+
+#: resources/ui/process_column_view/process_action_bar.blp:111
+msgid "Suspend (STOP)"
+msgstr "Suspender (STOP)"
+
+#: resources/ui/process_column_view/process_action_bar.blp:116
+msgid "Continue (CONT)"
+msgstr "Fortsett (CONT)"
+
+#: resources/ui/process_column_view/process_action_bar.blp:121
+msgid "Hangup (HUP)"
+msgstr "Legg på (HUP)"
+
+#: resources/ui/process_column_view/process_action_bar.blp:126
+msgid "Interrupt (INT)"
+msgstr "Avbryt (INT)"
+
+#: resources/ui/process_column_view/process_action_bar.blp:131
+msgid "Terminate (TERM)"
+msgstr "Terminer (TERM)"
+
+#: resources/ui/process_column_view/process_action_bar.blp:136
+msgid "Kill (KILL)"
+msgstr "Drep (KILL)"
+
+#: resources/ui/process_column_view/process_action_bar.blp:141
+msgid "User 1 (USR1)"
+msgstr "Bruker 1 (USR1)"
+
+#: resources/ui/process_column_view/process_action_bar.blp:146
+msgid "User 2 (USR2)"
+msgstr "Bruker 2 (USR2)"
+
+#: resources/ui/process_column_view/process_details_dialog.blp:84
+msgid "App ID"
+msgstr "App-ID"
+
+#: resources/ui/process_column_view/service_action_bar.blp:35
+msgid "Start the selected service"
+msgstr "Start den valgte tjenesten"
+
+#: resources/ui/process_column_view/service_action_bar.blp:47
+#: resources/ui/process_column_view/service_action_bar.blp:118
+msgid "Start"
+msgstr "Start"
+
+#: resources/ui/process_column_view/service_action_bar.blp:54
+msgid "Stop the selected service"
+msgstr "Stop den valgte tjenesten"
+
+#: resources/ui/process_column_view/service_action_bar.blp:74
+msgid "Restart the selected service"
+msgstr "Start den valgte tjenesten på nytt"
+
+#: resources/ui/process_column_view/service_action_bar.blp:86
+#: resources/ui/process_column_view/service_action_bar.blp:128
+msgid "Restart"
+msgstr "Start på nytt"
+
+#: resources/ui/process_column_view/service_action_bar.blp:93
+msgid "Show details of the selected service"
+msgstr "Vis detaljene til den valgte tjenesten"
+
+#: resources/ui/process_column_view/service_details_dialog.blp:33
+msgid "Service Details"
+msgstr "Tjenestedetaljer"
+
+#: resources/ui/process_column_view/service_details_dialog.blp:57
+msgid "State"
+msgstr "Tilstand"
+
+#: resources/ui/process_column_view/service_details_dialog.blp:58
+msgid "The current state of the service"
+msgstr "Tjenestens nåværende status"
+
+#: resources/ui/process_column_view/service_details_dialog.blp:75
+msgid "Start service"
+msgstr "Start tjeneste"
+
+#: resources/ui/process_column_view/service_details_dialog.blp:90
+msgid "Stop service"
+msgstr "Stopp tjeneste"
+
+#: resources/ui/process_column_view/service_details_dialog.blp:106
+msgid "Restart service"
+msgstr "Start tjeneste på nytt"
+
+#: resources/ui/process_column_view/service_details_dialog.blp:164
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: resources/ui/process_column_view/service_details_dialog.blp:194
+msgid "Status"
+msgstr "Status"
+
+#: resources/ui/process_column_view/service_details_dialog.blp:213
+msgid "Enabled"
+msgstr "Aktivert"
+
+#: resources/ui/process_column_view/service_details_dialog.blp:220
+#: src/process_tree/row_model.rs:266
+msgid "Process"
+msgstr "Prosess"
+
+#: resources/ui/process_column_view/service_details_dialog.blp:221
+msgid "Process and user information"
+msgstr "Prosess- og brukerinformasjon"
+
+#: resources/ui/process_column_view/service_details_dialog.blp:237
+msgid "Process ID"
+msgstr "Prosess-ID"
+
+#: resources/ui/process_column_view/service_details_dialog.blp:269
+msgid "User"
+msgstr "Bruker"
+
+#: resources/ui/process_column_view/service_details_dialog.blp:301
+msgid "Group"
+msgstr "Gruppe"
+
+#: resources/ui/process_column_view/service_details_dialog.blp:333
+msgid "File Location"
+msgstr "Fillokasjon"
+
+#: resources/ui/process_column_view/service_details_dialog.blp:356
+msgid "Logs"
+msgstr "Logger"
+
+#: resources/ui/about_system_dialog.blp:36
+msgid "System Info"
+msgstr "Systeminfo"
+
+#: resources/ui/about_system_dialog.blp:65
+msgid "Operating System Information"
+msgstr "Informasjon om operativsystemet"
+
+#: resources/ui/about_system_dialog.blp:108
+#: resources/ui/about_system_dialog.blp:226
+#: resources/ui/about_system_dialog.blp:288
+msgid "Version"
+msgstr "Versjon"
+
+#: resources/ui/about_system_dialog.blp:136
+msgid "Package Manager"
+msgstr "Pakkesystem"
+
+#: resources/ui/about_system_dialog.blp:164
+msgid "Package Manager Version"
+msgstr "Pakkesystemversjon"
+
+#: resources/ui/about_system_dialog.blp:183
+msgid "Kernel Information"
+msgstr "Kjerneinformasjon"
+
+#: resources/ui/about_system_dialog.blp:198
+msgid "Kernel Release"
+msgstr "Kjerneutgivelse"
+
+#: resources/ui/about_system_dialog.blp:245
+msgid "Desktop Environment Information"
+msgstr "Informasjon om skrivebordsmiljøet"
+
+#: resources/ui/about_system_dialog.blp:316
+msgid "Windowing System"
+msgstr "Vindussystem"
+
+#: resources/ui/about_system_dialog.blp:344
+msgid "Virtual Terminal"
+msgstr "Virtuell terminal"
+
+#: resources/ui/window.blp:49
+msgid "Enable All"
+msgstr "Aktiver alle"
+
+#: resources/ui/window.blp:54
+msgid "Disable All"
+msgstr "Deaktiver alle"
+
+#: resources/ui/window.blp:59
+msgid "Reset to Default"
+msgstr "Sett tilbake til standard"
+
+#: resources/ui/window.blp:64
+msgid "Devices"
+msgstr "Enheter"
+
+#: resources/ui/window.blp:70
+msgid "Edit Sidebar"
+msgstr "Rediger sidepanelet"
+
+#: resources/ui/window.blp:118
+msgid "Type a name or PID to search"
+msgstr "Skriv navn eller PID for å søke"
+
+#: resources/ui/window.blp:133
+msgid "Toggle Device Information"
+msgstr "Vis/skjul diskinformasjon"
+
+#: resources/ui/window.blp:148
+msgid "Main Menu"
+msgstr "Hovedmeny"
+
+#: resources/ui/window.blp:178
+msgid "Loading..."
+msgstr "Laster..."
+
+#: resources/ui/window.blp:192
+msgid "Performance"
+msgstr "Ytelse"
+
+#: resources/ui/window.blp:204 src/apps_page/mod.rs:79
+msgid "Apps"
+msgstr "Programmer"
+
+#: resources/ui/window.blp:212
+msgid "Services"
+msgstr "Tjenester"
+
+#: resources/ui/window.blp:237
+msgid "_Preferences"
+msgstr "_Innstillinger"
+
+#: resources/ui/window.blp:242
+msgid "_Keyboard Shortcuts"
+msgstr "_Tastatursnarveier"
+
+#: resources/ui/window.blp:249
+msgid "_About System"
+msgstr "_Om systemet"
+
+#: resources/ui/window.blp:256
+msgid "_About Mission Center"
+msgstr "_Om Mission Center"
+
+#: src/apps_page/mod.rs:259
+#, rust-format
+msgid "{} Running App"
+msgid_plural "{} Running Apps"
+msgstr[0] "{} Kjørende program"
+msgstr[1] "{} Kjørende programmer"
+
+#: src/apps_page/mod.rs:269
+#, rust-format
+msgid "{} Running Process"
+msgid_plural "{} Running Processes"
+msgstr[0] "{} Kjørende tjeneste"
+msgstr[1] "{} Kjørende tjenester"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:95
+#, rust-format
+msgid "{} ago"
+msgstr "{} siden"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:98
+#: src/performance_page/cpu.rs:321 src/performance_page/cpu.rs:332
+#: src/performance_page/cpu.rs:356 src/performance_page/cpu.rs:364
+#: src/performance_page/disk.rs:211 src/performance_page/disk.rs:228
+#: src/performance_page/disk.rs:255 src/performance_page/disk.rs:375
+#: src/performance_page/gpu.rs:247 src/performance_page/gpu.rs:303
+#: src/performance_page/memory.rs:533 src/performance_page/memory.rs:764
+#: src/performance_page/mod.rs:1392 src/performance_page/mod.rs:1402
+#: src/performance_page/network.rs:262 src/performance_page/network.rs:365
+#: src/performance_page/network.rs:393 src/performance_page/network.rs:482
+#: src/performance_page/network.rs:518
+msgid "Unknown"
+msgstr "Ukjent"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:130
+msgid "Pre-Fail"
+msgstr "Tyder på feil"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:131
+msgid "Old-Age"
+msgstr "Tyder på alder"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:134
+msgid "Online"
+msgstr "På"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:135
+msgid "Offline"
+msgstr "Av"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:142
+msgid "FAILING"
+msgstr "SVIKTENDE"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:147
+msgid "Failed in the past"
+msgstr "Har tidligere sviktet"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:149
+msgid "Ok"
+msgstr "Ok"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:197
+msgid "Percent Used"
+msgstr "Prosent i bruk"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:205
+msgid "Available Spare"
+msgstr "Tilgjengelig i reserve"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:213
+msgid "Spare Threshold"
+msgstr "Terskel for reserve"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:221
+msgid "Total Data Read"
+msgstr "Total mengde data lest"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:229
+msgid "Total Data Written"
+msgstr "Total mengde data skrevet"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:240
+msgid "Warning Temp Time"
+msgstr "Tid tilbrakt over advarselstemperatur"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:248
+msgid "Critical Temp Time"
+msgstr "Tid tilbrakt over kritisk temperatur"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:256
+#: src/performance_page/widgets/smart_data_dialog.rs:313
+msgid "Control Busy Time"
+msgstr "Tid kontrolleren har vært opptatt"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:264
+msgid "Warning Temperature"
+msgstr "Advarselstemperatur"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:266
+#: src/performance_page/widgets/smart_data_dialog.rs:274
+#: src/performance_page/widgets/smart_sata_dialog_row.rs:106
+#: src/performance_page/fan.rs:296
+#, rust-format
+msgid "{} °C"
+msgstr "{} °C"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:272
+msgid "Critical Temperature"
+msgstr "Kritisk temperatur"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:279
+msgid "Temps"
+msgstr "Temperatur"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:281
+msgid "Unsafe Shutdowns"
+msgstr "Antall ganger skrudd av utrygt"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:289
+msgid "Media Errors"
+msgstr "Mediafeil"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:297
+msgid "Number Error Log Entries"
+msgstr "Antall oppføringer i feilmeldingsloggen"
+
+#: src/performance_page/widgets/smart_data_dialog.rs:305
+msgid "Power Cycles"
+msgstr "Antall ganger skrudd av og på"
+
+#: src/performance_page/widgets/mem_composition_widget.rs:249
+#, rust-format
+msgid ""
+"In use ({})\n"
+"\n"
+"Memory used by the operating system and running applications"
+msgstr ""
+"I bruk ({})\n"
+"\n"
+"Minne i bruk av operativsystemet og kjørende programmer"
+
+#: src/performance_page/widgets/mem_composition_widget.rs:279
+#, rust-format
+msgid ""
+"Modified ({})\n"
+"\n"
+"Memory whose contents must be written to disk before it can be used by "
+"another process"
+msgstr ""
+"Endret ({})\n"
+"\n"
+"Minne med innhold som må skrives til disk før det kan brukes av en annen "
+"prosess"
+
+#: src/performance_page/widgets/mem_composition_widget.rs:303
+#, rust-format
+msgid ""
+"Standby ({})\n"
+"\n"
+"Memory that contains cached data and code that is not actively in use"
+msgstr ""
+"På vent ({})\n"
+"\n"
+"Minne som inneholder hurtiglagret data og kode som ikke aktivt er i bruk"
+
+#: src/performance_page/widgets/mem_composition_widget.rs:316
+#, rust-format
+msgid ""
+"Free ({})\n"
+"\n"
+"Memory that is not currently in use, and that will be repurposed first when "
+"the operating system, drivers, or applications need more memory"
+msgstr ""
+"Ledig ({})\n"
+"\n"
+"Minne som ikke er i bruk nå, og som vil bli omfordelt når operativsystemet, "
+"drivere eller programmer trenger mer minne"
+
+#: src/performance_page/widgets/smart_sata_dialog_row.rs:104
+#, rust-format
+msgid "{} sectors"
+msgstr "{} sektorer"
+
+#: src/performance_page/cpu.rs:344 src/performance_page/fan.rs:337
+#: src/performance_page/gpu.rs:318
+msgid "Unsupported"
+msgstr "Ikke støttet"
+
+#: src/performance_page/cpu.rs:351 src/performance_page/disk.rs:232
+msgid "Yes"
+msgstr "Ja"
+
+#: src/performance_page/cpu.rs:353 src/performance_page/disk.rs:234
+msgid "No"
+msgstr "Nei"
+
+#: src/performance_page/disk.rs:201
+#, rust-format
+msgid "Disk {} ({})"
+msgstr "Disk {} ({})"
+
+#: src/performance_page/disk.rs:205 src/performance_page/disk.rs:359
+#, rust-format
+msgid "Drive ({})"
+msgstr "Disk ({})"
+
+#: src/performance_page/disk.rs:243 src/performance_page/mod.rs:1122
+msgid "HDD"
+msgstr "Harddisk"
+
+#: src/performance_page/disk.rs:244 src/performance_page/mod.rs:1123
+msgid "SSD"
+msgstr "SSD"
+
+#: src/performance_page/disk.rs:245 src/performance_page/mod.rs:1124
+msgid "NVMe"
+msgstr "NVMe"
+
+#: src/performance_page/disk.rs:246 src/performance_page/mod.rs:1125
+msgid "eMMC"
+msgstr "eMMC"
+
+#: src/performance_page/disk.rs:247 src/performance_page/mod.rs:1126
+msgid "SD"
+msgstr "SD"
+
+#: src/performance_page/disk.rs:248 src/performance_page/mod.rs:1127
+msgid "iSCSI"
+msgstr "iSCSI"
+
+#: src/performance_page/disk.rs:249 src/performance_page/mod.rs:1128
+msgid "Optical"
+msgstr "Optisk"
+
+#: src/performance_page/disk.rs:250 src/performance_page/mod.rs:1129
+msgid "Floppy"
+msgstr "Diskett"
+
+#: src/performance_page/disk.rs:251 src/performance_page/mod.rs:1130
+msgid "Thumb Drive"
+msgstr "USB-minnepinne"
+
+#: src/performance_page/disk.rs:355
+#, rust-format
+msgid "Drive {} ({})"
+msgstr "Disk {} ({})"
+
+#: src/performance_page/disk.rs:385 src/performance_page/fan.rs:280
+#: src/performance_page/fan.rs:315
+#, rust-format
+msgid "{} RPM"
+msgstr "{} r/min"
+
+#: src/performance_page/fan.rs:274 src/performance_page/mod.rs:1505
+#: src/performance_page/mod.rs:2236
+#, rust-format
+msgid "Fan {}"
+msgstr "Vifte {}"
+
+#: src/performance_page/fan.rs:276 src/performance_page/mod.rs:1507
+#: src/performance_page/mod.rs:2238
+msgid "Fan"
+msgstr "Vifte"
+
+#: src/performance_page/fan.rs:285
+#, rust-format
+msgid "{}%"
+msgstr "{}%"
+
+#: src/performance_page/gpu.rs:285
+msgid "Video encode/decode"
+msgstr "Videokoding- og dekoding"
+
+#: src/performance_page/gpu.rs:356 src/performance_page/mod.rs:1395
+#: src/performance_page/mod.rs:2157
+#, rust-format
+msgid "GPU {}"
+msgstr "Grafikkenhet {}"
+
+#: src/performance_page/gpu.rs:570
+msgid "Total Memory"
+msgstr "Totalt minne"
+
+#: src/performance_page/gpu.rs:599
+msgid "Dedicated and shared memory usage over "
+msgstr "Dedikert og delt minnebruk over "
+
+#: src/performance_page/gpu.rs:645
+msgid "Total Shared Memory"
+msgstr "Totalt delt minne"
+
+#: src/performance_page/memory.rs:376
+#, rust-format
+msgid "{} of {}"
+msgstr "{} av {}"
+
+#: src/performance_page/memory.rs:398
+msgid "Getting additional memory information failed"
+msgstr "Mer informasjon om minne kunne ikke hentes"
+
+#: src/performance_page/mod.rs:1136
+#, rust-format
+msgid "{} {} ({})"
+msgstr "{} {} ({})"
+
+#: src/performance_page/mod.rs:2097 src/performance_page/mod.rs:2098
+#, rust-format
+msgid "{}: {}"
+msgstr "{}: {}"
+
+#: src/services_page/mod.rs:95
+#, rust-format
+msgid "{} Total Service"
+msgid_plural "{} Total Services"
+msgstr[0] "{} tjeneste"
+msgstr[1] "{} tjenester"
+
+#: src/services_page/mod.rs:107 src/process_tree/service_details_dialog.rs:239
+#: src/process_tree/service_details_dialog.rs:314
+msgid "Running"
+msgstr "Kjørende"
+
+#: src/services_page/mod.rs:116 src/process_tree/service_details_dialog.rs:241
+#: src/process_tree/service_details_dialog.rs:316
+msgid "Failed"
+msgstr "Mislykket"
+
+#: src/services_page/mod.rs:125 src/process_tree/service_details_dialog.rs:243
+#: src/process_tree/service_details_dialog.rs:318
+msgid "Stopped"
+msgstr "Stoppet"
+
+#: src/services_page/mod.rs:134
+msgid "Disabled"
+msgstr "Deaktivert"
+
+#: src/services_page/mod.rs:140
+msgid "No services match the current filters"
+msgstr "Ingen tjenester samsvarer med de valgte filterene"
+
+#: src/services_page/mod.rs:142
+msgid "No filters applied"
+msgstr "Ingen filtre valgt"
+
+#: src/services_page/mod.rs:149
+#, rust-format
+msgid "{} {} Service"
+msgid_plural "{} {} Services"
+msgstr[0] "{} {} tjeneste"
+msgstr[1] "{} {} tjenester"
+
+#: src/services_page/mod.rs:177
+msgid "User Services"
+msgstr "Brukertjenester"
+
+#: src/services_page/mod.rs:182
+msgid "System Services"
+msgstr "Systemtjenester"
+
+#: src/services_page/mod.rs:403
+msgid "Not Implemented"
+msgstr "Ikke implementert"
+
+#: src/process_tree/row_model.rs:263
+msgid "Section Header"
+msgstr "Seksjonsoverskrift"
+
+#: src/process_tree/row_model.rs:264
+msgid "Service"
+msgstr "Tjeneste"
+
+#: src/process_tree/row_model.rs:265
+msgid "App"
+msgstr "Program"
+
+#: src/process_tree/service_details_dialog.rs:203
+msgid "Copy logs to clipboard"
+msgstr "Kopier logger til utklippstavlen"
+
+#: src/application.rs:409
+msgid "translator-credits"
+msgstr ""
+"Allan Nordhøy <epost@anotheragency.no>\n"
+"Telaneo <post@telaneo.net>"
+
+#: src/main.rs:103
+#, rust-format
+msgid "{} year"
+msgid_plural "{} years"
+msgstr[0] "{} år"
+msgstr[1] "{} år"
+
+#: src/main.rs:107
+#, rust-format
+msgid "{} month"
+msgid_plural "{} months"
+msgstr[0] "{} måned"
+msgstr[1] "{} måneder"
+
+#: src/main.rs:111
+#, rust-format
+msgid "{} day"
+msgid_plural "{} days"
+msgstr[0] "{} dag"
+msgstr[1] "{} dager"
+
+#: src/main.rs:115
+#, rust-format
+msgid "{} hour"
+msgid_plural "{} hours"
+msgstr[0] "{} time"
+msgstr[1] "{} timer"
+
+#: src/main.rs:119 src/main.rs:184
+#, rust-format
+msgid "{} minute"
+msgid_plural "{} minutes"
+msgstr[0] "{} minutt"
+msgstr[1] "{} minutter"
+
+#: src/main.rs:123 src/main.rs:182
+#, rust-format
+msgid "{} second"
+msgid_plural "{} seconds"
+msgstr[0] "{} sekund"
+msgstr[1] "{} sekunder"
+
+#. Translators: Used for duration greater than one year. First %s is number of years, second %s is months, third %s is days
+#: src/main.rs:159
+#, rust-format
+msgid "{}, {} and {}"
+msgstr "{}, {} og {}"
+
+#. Translators: Used for durations less than one year but greater than one month. First %s is number of months, second %s is days
+#. Translators: Used for durations less than one month but greater than one day. First %s is number of days, second %s is hours
+#. Translators: Used for durations less than one day but greater than one hour. First %s is number of hours, second %s is minutes
+#: src/main.rs:162 src/main.rs:165 src/main.rs:168
+#, rust-format
+msgid "{} and {}"
+msgstr "{} og {}"
+
+#: src/main.rs:174
+msgid "Less than a minute"
+msgstr "Mindre enn ett minutt"
+
+#: src/main.rs:404
+msgid "_Quit"
+msgstr "_Avslutt"
+
+#~ msgid "App Page"
+#~ msgstr "Programside"
+
+#~ msgid "{} failed services out of a total of {}"
+#~ msgstr "{} feilende tjenester av totalt {}"
+
+#~ msgid "Close"
+#~ msgstr "Lukk"
+
+#~ msgid "Retry"
+#~ msgstr "Prøv på nytt"
+
+#~ msgid "Kill All"
+#~ msgstr "Deaktiver alle"
+
+#, fuzzy
+#~ msgid "{} minutes"
+#~ msgstr "{} minutt{} "
+
+#~ msgid "{} second{}"
+#~ msgstr "{} sekund{}"
+
+#~ msgid "{} minute{} "
+#~ msgstr "{} minutt{} "
+
+#, fuzzy
+#~ msgid "Whether or not to use base-10 (default) or base-2 for memory"
+#~ msgstr "Om du vil bruke bits (standard) eller byte for nettverkshastighet"
+
+#~ msgid "No per-process network usage"
+#~ msgstr "Ingen nettverksbruk per prosess"
+
+#~ msgid "GPU support is experimental"
+#~ msgstr "GPU-støtte er eksperimentel"
+
+#~ msgid "PWM %"
+#~ msgstr "PBM %"
+
+#~ msgid "GTT usage"
+#~ msgstr "GTT-bruk"
+
+#~ msgid "Show Network Speed In Bytes"
+#~ msgstr "Vis nettverkshastighet i byte"
+
+#~ msgid "GPU Usage"
+#~ msgstr "GPU-bruk"
+
+#~ msgid "Stop Application"
+#~ msgstr "Stopp programmet"
+
+#~ msgid "Force Stop Application"
+#~ msgstr "Tving applikasjonen til å stoppe"
+
+#~ msgid "{} {}{}B/s"
+#~ msgstr "{} {}{}B/s"
+
+#~ msgid "{}"
+#~ msgstr "{}"
+
+#~ msgid "B/s"
+#~ msgstr "B/s"
+
+#~ msgid "bps"
+#~ msgstr "bits/s"
+
+#, fuzzy
+#~ msgid "{} {}bps"
+#~ msgstr "{} {}bps"
+
+#~ msgid "Ethernet"
+#~ msgstr "Ethernet"
+
+#~ msgid "Wi-Fi"
+#~ msgstr "Wi-Fi"
+
+#~ msgid "Other"
+#~ msgstr "Annet"
+
+#~ msgid "Flatpak first"
+#~ msgstr "Flatpak først"
+
+#, fuzzy
+#~ msgid "Video decode utilization"
+#~ msgstr "Videodekoding"
+
+#~ msgid "_Disk"
+#~ msgstr "_Disk"
+
+#~ msgid "Disk"
+#~ msgstr "Disk"
+
+#, fuzzy
+#~ msgid "Fix a bug where the Gatherer process would crash at startup"
+#~ msgstr "Feilfiks der programmet og prosesslisten var tom for noen brukere"
+
+#, fuzzy
+#~ msgid ""
+#~ "Fix a bug where the number of CPUs was incorrectly detected on some "
+#~ "systems (again!)"
+#~ msgstr "Feilfiks der programmet og prosesslisten var tom for noen brukere"
+
+#, fuzzy
+#~ msgid ""
+#~ "Fix a bug where the number of CPUs was incorrectly detected on some "
+#~ "systems"
+#~ msgstr "Feilfiks der programmet og prosesslisten var tom for noen brukere"
+
+#, fuzzy
+#~ msgid "Update to GTK 4.12 and libadwaita 1.4"
+#~ msgstr "Bruker GTK4 og Libadwaita"
+
+#, fuzzy
+#~ msgid ""
+#~ "Fixed a bug where the Maps app desktop file wasn't being parsed correctly"
+#~ msgstr "Feilfiks der programmet og prosesslisten var tom for noen brukere"
+
+#, fuzzy
+#~ msgid "Translations:"
+#~ msgstr "Virtualisering:"
+
+#, fuzzy
+#~ msgid "New translation to Portuguese (Brazil) by Gérson da Fonseca Henzel"
+#~ msgstr "Språkvask av Portugisisk av Rafael Fontenelle"
+
+#, fuzzy
+#~ msgid "Updated Spanish translation"
+#~ msgstr "Tjekkisk oversettelse ved ondra05"
+
+#, fuzzy
+#~ msgid "Updated Finnish translation"
+#~ msgstr "Tjekkisk oversettelse ved ondra05"
+
+#, fuzzy
+#~ msgid "Updated Russian translation"
+#~ msgstr "Tjekkisk oversettelse ved ondra05"
+
+#, fuzzy
+#~ msgid "Updated Chinese (Simplified) translation"
+#~ msgstr "Tjekkisk oversettelse ved ondra05"
+
+#, fuzzy
+#~ msgid "Updated Greek translation"
+#~ msgstr "Tjekkisk oversettelse ved ondra05"
+
+#, fuzzy
+#~ msgid "Updated German translation"
+#~ msgstr "Tjekkisk oversettelse ved ondra05"
+
+#, fuzzy
+#~ msgid "Updated Czech translation"
+#~ msgstr "Tjekkisk oversettelse ved ondra05"
+
+#, fuzzy
+#~ msgid "Updated Portuguese translation"
+#~ msgstr "Portugisisk oversettelse ved Rilson Joás"
+
+#, fuzzy
+#~ msgid "Add German translation by TecCheck"
+#~ msgstr "Tjekkisk oversettelse ved ondra05"
+
+#, fuzzy
+#~ msgid "Translation updates for Traditional Chinese by Peter Dave Hello"
+#~ msgstr "Støtte for tradisjonell kinesisk av Peter Dave Hello"
+
+#~ msgid "Translation fixes for Portuguese by Rafael Fontenelle"
+#~ msgstr "Språkvask av Portugisisk av Rafael Fontenelle"
+
+#~ msgid ""
+#~ "Only show a link-local IPv6 address if no other IPv6 exists by Maximilian"
+#~ msgstr ""
+#~ "Kun vis en lokal-lenke-IPv6-adresse hvis ingen annen IPv6 finnes, av "
+#~ "Maximilian"
+
+#~ msgid "Add Traditional Chinese locale by Peter Dave Hello"
+#~ msgstr "Støtte for tradisjonell kinesisk av Peter Dave Hello"
+
+#~ msgid "Add category for application menu by Renner0E"
+#~ msgstr "Kategori for programmeny av Renner0E"
+
+#~ msgid ""
+#~ "Fix a parsing error when parsing the output of `dmidecode` that lead to a "
+#~ "panic"
+#~ msgstr ""
+#~ "Fikset tolkningsfeil for utdata av `dmidecode` som ledet til panikk-"
+#~ "tilstand"
+
+#~ msgid ""
+#~ "Use a fallback if `/sys/devices/system/cpu/cpu0/cpufreq/base_frequency` "
+#~ "does not exist, when getting CPU base speed information"
+#~ msgstr ""
+#~ "Tilbakefall brukt hvis`/sys/devices/system/cpu/cpu0/cpufreq/"
+#~ "base_frequency` ikke finnes ved innhenting av grunnhastighet for prosessor"
+
+#~ msgid "Update GPU tab UI to be more adaptive for smaller resolutions"
+#~ msgstr "Oppdatert GPU-fane til mer adaptivt utseende ved mindre oppløsning"
+
+#~ msgid "Added Czech translation by ondra05"
+#~ msgstr "Tjekkisk oversettelse ved ondra05"
+
+#~ msgid "Added Portuguese translation by Rilson Joás"
+#~ msgstr "Portugisisk oversettelse ved Rilson Joás"
+
+#~ msgid ""
+#~ "Add keywords to desktop file to improve search function of desktop "
+#~ "environments by Hannes Kuchelmeister"
+#~ msgstr ""
+#~ "Nøkkelord lagt til i skrivebordsfil for å forbedre søkefunksjon for "
+#~ "skrivebordsmiljøer av Hannes Kuchelmeister"
+
+#~ msgid "Fixed a bug where the app and process list was empty for some users"
+#~ msgstr "Feilfiks der programmet og prosesslisten var tom for noen brukere"
+
+#~ msgid "Fix a crash that occurs when the system is under heavy load"
+#~ msgstr "Krasjfiks som oppstår når systemet opplever hard last"
+
+#~ msgid "First official release!"
+#~ msgstr "Første offisielle utgave."
+
+#~ msgid "Disk transfer rate"
+#~ msgstr "Diskoverføringshastighet"
+
+#~ msgid "Overall utilization"
+#~ msgstr "Helhetlig bruk"
+
+#, fuzzy
+#~ msgid ""
+#~ "GPU support is experimental and only AMD and nVidia GPUs can be monitored"
+#~ msgstr ""
+#~ "Grafikkstøtte er eksperimentell og er kun for AMD- og NVIDIA-"
+#~ "prosessorenheter"
+
+#~ msgid "Fast"
+#~ msgstr "Rask"
+
+#~ msgid "Refresh every half second"
+#~ msgstr "Hvert halve sekund"
+
+#~ msgid "Refresh every second"
+#~ msgstr "Hvert sekund"
+
+#~ msgid "Slow"
+#~ msgstr "Treg"
+
+#~ msgid "Refresh every second and a half"
+#~ msgstr "Hvert 2,5 sekund"
+
+#~ msgid "Very Slow"
+#~ msgstr "Veldig treg"
+
+#~ msgid "Refresh every 2 seconds"
+#~ msgstr "Hvert andre sekund"
+
+#~ msgid "Supported"
+#~ msgstr "Støttet"
+
+#, fuzzy
+#~ msgid "Authentication failed"
+#~ msgstr "_Identitetsbekreft"
+
+#~ msgid "Disk utilization percentage might not be accurate"
+#~ msgstr "Prosentvis diskbruk kan være unøyaktig"
+
+#~ msgid "No per-process GPU usage"
+#~ msgstr "Ingen grafikkbruk per prosess"
+
+#~ msgid "Some information requires administrative privileges"
+#~ msgstr "Noen info krever administrativ tilgang"
+
+#, fuzzy
+#~ msgid ""
+#~ "The application currently only supports monitoring, you cannot stop "
+#~ "processes for example"
+#~ msgstr ""
+#~ "Programmer støtter per nå kun oppsyn. Du kan f.eks. ikke stoppe prosesser."
+
+#~ msgid "% Utilization"
+#~ msgstr "% bruk"
+
+#, fuzzy
+#~ msgid "{}: {} {}bps {}: {} {}bps"
+#~ msgstr "{}: {} {}bps {}: {} {}bps"

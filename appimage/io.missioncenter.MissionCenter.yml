@@ -1,0 +1,25 @@
+# appimage-builder recipe see https://appimage-builder.readthedocs.io for details
+
+version: 1
+AppDir:
+  path: AppDir
+  app_info:
+    id: io.missioncenter.MissionCenter
+    name: Mission Center
+    icon: io.missioncenter.MissionCenter
+    version: 1.1.0
+    exec: entrypoint
+    exec_args: $@
+  runtime:
+    env:
+      MC_RESOURCE_DIR: $APPDIR/usr/share/missioncenter
+      MC_MAGPIE_HW_DB: $APPDIR/usr/share/missioncenter/hw.db
+  test:
+    ubuntu-focal:
+      image: appimagecrafters/tests-env:ubuntu-focal
+      command: "./AppRun"
+      use_host_x: True
+AppImage:
+  arch: x86_64
+  update-information: None
+  sign-key: None

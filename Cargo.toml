@@ -1,0 +1,47 @@
+[package]
+name = "missioncenter"
+version = "0.1.0"
+authors = [
+    "PukuPuku",
+    "Jan Luca <janluca.oster@proton.me>",
+    "jojo2357",
+    "Romeo Calota <mail@romeocalota.me>",
+]
+edition = "2021"
+
+[features]
+skip-codegen = ["magpie-types/skip-codegen"]
+
+[dependencies]
+arrayvec = "0.7"
+nng-c = "1.11"
+paste = "1.0"
+rand = "0.9.2"
+regex = "1.11"
+rust-ini = "0.21"
+textdistance = "1.1"
+
+[dependencies.adw]
+package = "libadwaita"
+version = "0.8"
+features = ["v1_8"]
+
+[dependencies.gettext-rs]
+version = "0.7"
+features = ["gettext-system"]
+
+[dependencies.gtk]
+package = "gtk4"
+version = "0.10"
+features = ["gnome_48"]
+
+[dependencies.magpie-types]
+path = "subprojects/magpie/types"
+
+[dependencies.nng-c-sys]
+version = "1.10"
+default-features = false
+
+[profile.release]
+opt-level = 3
+codegen-units = 1

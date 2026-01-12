@@ -1,0 +1,93 @@
+/* ui/benchmark_page/page.blp
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+using Gtk 4.0;
+using Adw 1;
+
+template $BenchmarkPage : Adw.Bin {
+  child: Adw.Clamp {
+    maximum-size: 900;
+
+    child: Box {
+      orientation: vertical;
+      spacing: 12;
+      margin-top: 18;
+      margin-bottom: 18;
+      margin-start: 18;
+      margin-end: 18;
+
+      Label {
+        styles ["title-1"]
+        label: _("Benchmark");
+        halign: start;
+      }
+
+      Label status_label {
+        label: _("Ready");
+        halign: start;
+        wrap: true;
+      }
+
+      CheckButton cpu_only_check {
+        label: _("CPU benchmark only (skip disk test)");
+        halign: start;
+      }
+
+      Box {
+        spacing: 12;
+
+        Button run_button {
+          label: _("Run Benchmark");
+          halign: start;
+        }
+
+        Gtk.Spinner spinner {
+          visible: false;
+          valign: center;
+        }
+      }
+
+      Adw.PreferencesGroup {
+        title: _("Results");
+
+        Adw.ActionRow {
+          title: _("CPU");
+          subtitle: _("Iterations per second");
+
+          [suffix]
+          Label cpu_value_label {
+            label: "-";
+            halign: end;
+            selectable: true;
+          }
+        }
+
+        Adw.ActionRow {
+          title: _("Disk write");
+          subtitle: _("MiB/s");
+
+          [suffix]
+          Label io_write_value_label {
+            label: "-";
+            halign: end;
+            selectable: true;
+          }
+        }
+
+        Adw.ActionRow {
+          title: _("Disk read");
+          subtitle: _("MiB/s");
+
+          [suffix]
+          Label io_read_value_label {
+            label: "-";
+            halign: end;
+            selectable: true;
+          }
+        }
+      }
+    };
+  };
+}

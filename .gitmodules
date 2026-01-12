@@ -1,0 +1,3 @@
+[submodule "subprojects/magpie"]
+	path = subprojects/magpie
+	url = ../gng.git

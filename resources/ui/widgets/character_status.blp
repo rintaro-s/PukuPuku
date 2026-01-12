@@ -1,0 +1,46 @@
+/* ui/widgets/character_status.blp
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+
+using Gtk 4.0;
+using Adw 1;
+
+template $CharacterStatusWidget : Adw.Bin {
+  child: Adw.Clamp {
+    maximum-size: 1000;
+
+    child: Box {
+      margin-top: 4;
+      margin-bottom: 4;
+      margin-start: 6;
+      margin-end: 6;
+      spacing: 8;
+
+      Picture character_picture {
+        width-request: 48;
+        height-request: 48;
+        can-shrink: true;
+        keep-aspect-ratio: true;
+      }
+
+      Box {
+        orientation: vertical;
+        spacing: 2;
+        hexpand: true;
+
+        Label title_label {
+          styles ["heading"]
+          label: _("Status");
+          halign: start;
+        }
+
+        Label mood_label {
+          label: "-";
+          halign: start;
+          wrap: true;
+        }
+      }
+    };
+  };
+}

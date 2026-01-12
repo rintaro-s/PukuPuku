@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=PukuPuku
+Exec=missioncenter
+Icon=io.github.rinta.PukuPuku
+Terminal=false
+Type=Application
+Categories=GTK;System;Monitor;
+StartupNotify=true
+Keywords=Task manager;Resource monitor;System monitor;Processor;Processes;Performance monitor;CPU;GPU;Disc;Disk;Memory;Network;Utilisation;Utilization

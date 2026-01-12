@@ -1,0 +1,319 @@
+spec:
+  inputs:
+    BUILD_FLATPAK:
+      default: false
+      type: boolean
+      description: "Build .flatpak files to install"
+    BUILD_APPIMAGE:
+      default: false
+      type: boolean
+      description: "Build appimage files for execution"
+    BUILD_SNAP:
+      default: false
+      type: boolean
+      description: "Build snap files to install"
+    BUILD_ARM:
+      default: false
+      type: boolean
+      description: "Make arm builds as well as x86 builds"
+    PORTABLE_TARBALL:
+      default: ''
+      type: string
+      description: "Tarball url to use, must be a valid url"
+---
+
+image: "ubuntu:25.10"
+
+workflow:
+  auto_cancel:
+    on_new_commit: interruptible
+
+stages:
+  - test
+  - package-build
+  - package
+
+.shared:
+  checkout_submodule:
+    - apt-get install -y git
+    - sed -i 's/= ..\/gng.git/= https:\/\/gitlab.com\/mission-center-devs\/gng.git/g' .gitmodules
+    - git submodule update --init --recursive
+
+  setup_apt:
+    - rm -rf /etc/apt/sources.list.d
+    - echo 'deb http://archive.ubuntu.com/ubuntu questing main restricted universe multiverse' > /etc/apt/sources.list
+    - echo 'deb http://archive.ubuntu.com/ubuntu questing-updates main restricted universe multiverse' >> /etc/apt/sources.list
+    - echo 'deb http://archive.ubuntu.com/ubuntu questing-security main restricted universe multiverse' >> /etc/apt/sources.list
+    - apt-get update && apt-get dist-upgrade -y
+
+  setup_apt_ports:
+    - rm -rf /etc/apt/sources.list.d
+    - echo 'deb http://ports.ubuntu.com/ubuntu-ports questing main restricted universe multiverse' > /etc/apt/sources.list
+    - echo 'deb http://ports.ubuntu.com/ubuntu-ports questing-updates main restricted universe multiverse' >> /etc/apt/sources.list
+    - echo 'deb http://ports.ubuntu.com/ubuntu-ports questing-security main restricted universe multiverse' >> /etc/apt/sources.list
+    - apt-get update && apt-get dist-upgrade -y
+
+  setup_apt_focal:
+    - rm -rf /etc/apt/sources.list.d
+    - echo 'deb http://archive.ubuntu.com/ubuntu focal main restricted universe multiverse' > /etc/apt/sources.list
+    - echo 'deb http://archive.ubuntu.com/ubuntu focal-updates main restricted universe multiverse' >> /etc/apt/sources.list
+    - echo 'deb http://archive.ubuntu.com/ubuntu focal-security main restricted universe multiverse' >> /etc/apt/sources.list
+    - apt-get update && apt-get dist-upgrade -y
+
+  setup_apt_focal_ports:
+    - rm -rf /etc/apt/sources.list.d
+    - echo 'deb http://ports.ubuntu.com/ubuntu-ports focal main restricted universe multiverse' > /etc/apt/sources.list
+    - echo 'deb http://ports.ubuntu.com/ubuntu-ports focal-updates main restricted universe multiverse' >> /etc/apt/sources.list
+    - echo 'deb http://ports.ubuntu.com/ubuntu-ports focal-security main restricted universe multiverse' >> /etc/apt/sources.list
+    - apt-get update && apt-get dist-upgrade -y
+
+  install_rust:
+    - apt-get install -y build-essential curl cmake git gettext python3-pip libadwaita-1-dev libdbus-1-dev python3-gi libudev-dev libdrm-dev libgbm-dev desktop-file-utils mold
+    - ln -sf /usr/bin/python3 /usr/local/bin/python
+    - ln -sf /usr/bin/mold /usr/bin/ld
+
+    - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --default-toolchain=1.90.0 -y
+    - export PATH="$HOME/.cargo/bin:$PATH"
+
+  install_flatpak:
+    - apt-get install -y build-essential flatpak flatpak-builder
+    - flatpak --system remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
+    - flatpak install -y org.freedesktop.Platform//25.08 org.freedesktop.Sdk//25.08 org.gnome.Platform//49 org.gnome.Sdk//49
+
+  ready_to_merge:
+    - if: '$CI_MERGE_REQUEST_LABELS =~ /CI::Skip Build/'
+      when: never
+
+check-fmt:
+  stage: test
+  interruptible: true
+  allow_failure: true
+  before_script:
+    - !reference [ ".shared", "setup_apt" ]
+    - !reference [ ".shared", "install_rust" ]
+  script:
+    - ./support/check-cargo-fmt.sh
+    - echo $CI_MERGE_REQUEST_LABELS
+  rules:
+    - !reference [ ".shared", "ready_to_merge" ]
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+build-job-x86:
+  stage: package-build
+  interruptible: true
+  before_script:
+    - !reference [ ".shared", "setup_apt" ]
+    - !reference [ ".shared", "install_rust" ]
+    - !reference [ ".shared", "checkout_submodule" ]
+
+    - pip install meson ninja --break-system-packages
+  script:
+    - meson setup _build -Dbuildtype=release -Dskip-codegen=true
+    - ninja -C _build
+    - glib-compile-schemas --strict data/
+  rules:
+    - !reference [ ".shared", "ready_to_merge" ]
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+build-job-arm:
+  stage: package-build
+  interruptible: true
+  tags:
+    - saas-linux-medium-arm64
+  before_script:
+    - !reference [ ".shared", "setup_apt_ports" ]
+    - !reference [ ".shared", "install_rust" ]
+    - !reference [ ".shared", "checkout_submodule" ]
+
+    - pip install meson ninja --break-system-packages
+  script:
+    - meson setup _build -Dbuildtype=release -Dskip-codegen=true
+    - ninja -C _build
+    - glib-compile-schemas --strict data/
+  rules:
+    - !reference [ ".shared", "ready_to_merge" ]
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+flatpak-job-x86:
+  stage: package-build
+  interruptible: true
+  tags:
+    - saas-linux-large-amd64
+  before_script:
+    - !reference [ ".shared", "setup_apt" ]
+    - !reference [ ".shared", "install_flatpak" ]
+    - !reference [ ".shared", "checkout_submodule" ]
+  script:
+    - cd flatpak && flatpak-builder --repo=repo --ccache --force-clean build io.missioncenter.MissionCenter.json
+    - flatpak build-bundle repo missioncenter-$(arch).flatpak io.missioncenter.MissionCenter
+  artifacts:
+    paths:
+      - flatpak/missioncenter-x86_64.flatpak
+  rules:
+    - if: "'true' == '$[[ inputs.BUILD_FLATPAK ]]'"
+    - !reference [ ".shared", "ready_to_merge" ]
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+flatpak-job-arm:
+  stage: package-build
+  interruptible: true
+  tags:
+    - saas-linux-large-arm64
+  before_script:
+    - !reference [ ".shared", "setup_apt_ports" ]
+    - !reference [ ".shared", "install_flatpak" ]
+    - !reference [ ".shared", "checkout_submodule" ]
+  script:
+    - cd flatpak && flatpak-builder --repo=repo --ccache --force-clean build io.missioncenter.MissionCenter.json
+    - flatpak build-bundle repo missioncenter-$(arch).flatpak io.missioncenter.MissionCenter
+  artifacts:
+    paths:
+      - flatpak/missioncenter-aarch64.flatpak
+  rules:
+    - if: "'true' == '$[[ inputs.BUILD_ARM ]]' && 'true' == '$[[ inputs.BUILD_FLATPAK ]]'"
+    - !reference [ ".shared", "ready_to_merge" ]
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+package-build-job-x86:
+  stage: package-build
+  interruptible: true
+  image: ubuntu:20.04
+  tags:
+    - saas-linux-large-amd64
+  before_script:
+    - !reference [ ".shared", "setup_apt_focal" ]
+    - !reference [ ".shared", "checkout_submodule" ]
+  script:
+    - SRC_PATH=$PWD OUT_PATH=$PWD/portable bash support/build-with-gtk-libadwaita.sh &> logs.txt || (tail -n 500 logs.txt && exit 1)
+    - cd portable && tar zcf ../portable-x86_64.tar.gz *
+
+  artifacts:
+    when: always
+    paths:
+      - 'logs.txt'
+      - 'portable-x86_64.tar.gz'
+  rules:
+    - if: "'' == '$[[ inputs.PORTABLE_TARBALL ]]' && ('true' == '$[[ inputs.BUILD_APPIMAGE ]]' || 'true' == '$[[ inputs.BUILD_SNAP ]]')"
+    - !reference [ ".shared", "ready_to_merge" ]
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+package-build-job-arm:
+  stage: package-build
+  interruptible: true
+  image: ubuntu:20.04
+  tags:
+    - saas-linux-large-arm64
+  before_script:
+    - !reference [ ".shared", "setup_apt_focal_ports" ]
+    - !reference [ ".shared", "checkout_submodule" ]
+  script:
+    - SRC_PATH=$PWD OUT_PATH=$PWD/portable bash support/build-with-gtk-libadwaita.sh &> logs.txt || (tail -n 500 logs.txt && exit 1)
+    - cd portable && tar zcf ../portable-aarch64.tar.gz *
+
+  artifacts:
+    when: always
+    paths:
+      - 'logs.txt'
+      - 'portable-aarch64.tar.gz'
+  rules:
+    - if: "'true' == '$[[ inputs.BUILD_ARM ]]' && '' == '$[[ inputs.PORTABLE_TARBALL ]]' && ('true' == '$[[ inputs.BUILD_APPIMAGE ]]' || 'true' == '$[[ inputs.BUILD_SNAP ]]')"
+    - !reference [ ".shared", "ready_to_merge" ]
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+snap-job-x86:
+  stage: package
+  interruptible: true
+  image: ubuntu:24.04
+  before_script:
+    - apt-get update && apt-get install -y curl ca-certificates
+  script:
+    - if [[ ! -z '$[[ inputs.PORTABLE_TARBALL ]]' ]]; then curl -LO '$[[ inputs.PORTABLE_TARBALL ]]'; fi
+    - mkdir -p snap/local && cd snap/local && tar xf ../../portable-x86_64.tar.gz && cd ../..
+
+    - SRC_PATH=$PWD bash support/create-snap.sh
+
+  needs:
+    - package-build-job-x86
+  artifacts:
+    paths:
+      - '**/*.snap'
+  rules:
+    - if: "'true' == '$[[ inputs.BUILD_SNAP ]]'"
+    - !reference [ ".shared", "ready_to_merge" ]
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+snap-job-arm:
+  stage: package
+  interruptible: true
+  image: ubuntu:24.04
+  tags:
+    - saas-linux-medium-arm64
+  before_script:
+    - apt-get update && apt-get install -y curl ca-certificates
+  script:
+
+    - if [[ ! -z '$[[ inputs.PORTABLE_TARBALL ]]' ]]; then curl -LO '$[[ inputs.PORTABLE_TARBALL ]]'; fi
+    - mkdir -p snap/local && cd snap/local && tar xf ../../portable-aarch64.tar.gz && cd ../..
+
+    - SRC_PATH=$PWD bash support/create-snap.sh
+
+  needs:
+    - package-build-job-arm
+  artifacts:
+    paths:
+      - '**/*.snap'
+  rules:
+    - if: "'true' == '$[[ inputs.BUILD_ARM ]]' && 'true' == '$[[ inputs.BUILD_SNAP ]]'"
+    - !reference [ ".shared", "ready_to_merge" ]
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+appimage-job-x86:
+  stage: package
+  interruptible: true
+  image: ubuntu:20.04
+  before_script:
+    - !reference [ ".shared", "setup_apt_focal" ]
+
+    - apt-get install -y curl ca-certificates
+  script:
+    - if [[ ! -z '$[[ inputs.PORTABLE_TARBALL ]]' ]]; then curl -LO '$[[ inputs.PORTABLE_TARBALL ]]'; fi
+    - cd appimage && /usr/bin/tar xf ../portable-x86_64.tar.gz && cd ..
+
+    - RECEIPE_PATH=$PWD/appimage APPDIR_PATH=$PWD/appimage bash support/create-appimage.sh
+
+  needs:
+    - package-build-job-x86
+  artifacts:
+    paths:
+      - '**/*.AppImage'
+  rules:
+    - if: "'true' == '$[[ inputs.BUILD_APPIMAGE ]]'"
+    - !reference [ ".shared", "ready_to_merge" ]
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+appimage-job-arm:
+  stage: package
+  interruptible: true
+  image: ubuntu:20.04
+  tags:
+    - saas-linux-medium-arm64
+  before_script:
+    - !reference [ ".shared", "setup_apt_focal_ports" ]
+
+    - apt-get install -y curl ca-certificates
+  script:
+    - if [[ ! -z '$[[ inputs.PORTABLE_TARBALL ]]' ]]; then curl -LO '$[[ inputs.PORTABLE_TARBALL ]]'; fi
+    - cd appimage && /usr/bin/tar xf ../portable-aarch64.tar.gz && cd ..
+
+    - RECEIPE_PATH=$PWD/appimage APPDIR_PATH=$PWD/appimage bash support/create-appimage.sh
+
+  needs:
+    - package-build-job-arm
+  artifacts:
+    paths:
+      - '**/*.AppImage'
+  rules:
+    - if: "'true' == '$[[ inputs.BUILD_ARM ]]' && 'true' == '$[[ inputs.BUILD_APPIMAGE ]]'"
+    - !reference [ ".shared", "ready_to_merge" ]
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    

@@ -1,0 +1,144 @@
+using Gtk 4.0;
+
+Gtk.ShortcutsWindow keyboard_shortcuts {
+  title: _("Keyboard Shortcuts");
+
+  Gtk.ShortcutsSection {
+    title: _("Global");
+
+    Gtk.ShortcutsGroup {
+      Gtk.ShortcutsShortcut {
+        title: _("Open Menu");
+        accelerator: "F10";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Close Window");
+        accelerator: "<Control>Q";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Close Window");
+        accelerator: "<Control>W";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Open Preferences");
+        accelerator: "<Control>comma";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Show Keyboard Shortcuts");
+        accelerator: "<Control>question";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Show Performance Page");
+        accelerator: "<Alt>1 <Control>1";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Show Apps Page");
+        accelerator: "<Alt>2 <Control>2";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Show Services Page");
+        accelerator: "<Alt>3 <Control>3";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Toggle Sidebar");
+        accelerator: "F9 <Control>T";
+      }
+    }
+  }
+
+  Gtk.ShortcutsSection {
+    title: _("Performance Page");
+
+    Gtk.ShortcutsGroup {
+      Gtk.ShortcutsShortcut {
+        title: _("Copy Device Information");
+        accelerator: "<Control>C";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Toggle Summary Mode");
+        accelerator: "<Control>M";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Select a Device");
+        accelerator: "F1...F8";
+      }
+    }
+  }
+
+  Gtk.ShortcutsSection {
+    title: _("Apps Page");
+
+    Gtk.ShortcutsGroup {
+      Gtk.ShortcutsShortcut {
+        title: _("Search");
+        accelerator: "<Control>F";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Collapse All");
+        accelerator: "<Control>L";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Stop App or Process");
+        accelerator: "<Control>E";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Force Stop App or Process");
+        accelerator: "<Control>X";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Show Details Dialog");
+        accelerator: "<Control>I";
+      }
+    }
+  }
+
+  Gtk.ShortcutsSection {
+    title: _("Services Page");
+
+    Gtk.ShortcutsGroup {
+      Gtk.ShortcutsShortcut {
+        title: _("Search");
+        accelerator: "<Control>F";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Collapse All");
+        accelerator: "<Control>L";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Start Service");
+        accelerator: "<Control>S";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Stop Service");
+        accelerator: "<Control>E";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Restart Service");
+        accelerator: "<Control>R";
+      }
+
+      Gtk.ShortcutsShortcut {
+        title: _("Show Details Dialog");
+        accelerator: "<Control>I";
+      }
+    }
+  }
+}
