@@ -154,9 +154,10 @@ template $MissionCenterWindow : Adw.ApplicationWindow {
 
       content: Box {
         orientation: vertical;
+        spacing: 0;
 
         $CharacterStatusWidget character_status {
-          visible: bind stack.visible;
+          visible: bind template.performance-page-active;
         }
 
         Box loading_box {

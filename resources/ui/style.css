@@ -65,7 +65,7 @@ button:active {
 
 /* Character status widget styling - hand-drawn sketch feel */
 characterstatuswidget {
-    border-radius: 8px;
+    border-radius: 6px;
     background: repeating-linear-gradient(
         45deg,
         transparent,
@@ -73,7 +73,7 @@ characterstatuswidget {
         alpha(currentColor, 0.01) 2px,
         alpha(currentColor, 0.01) 4px
     );
-    padding: 2px;
+    padding: 1px;
     box-shadow: 0 1px 2px alpha(black, 0.05);
 }
 

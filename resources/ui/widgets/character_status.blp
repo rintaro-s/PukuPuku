@@ -11,22 +11,22 @@ template $CharacterStatusWidget : Adw.Bin {
     maximum-size: 1000;
 
     child: Box {
-      margin-top: 4;
-      margin-bottom: 4;
-      margin-start: 6;
-      margin-end: 6;
-      spacing: 8;
+      margin-top: 2;
+      margin-bottom: 2;
+      margin-start: 4;
+      margin-end: 4;
+      spacing: 6;
 
       Picture character_picture {
-        width-request: 48;
-        height-request: 48;
+        width-request: 40;
+        height-request: 40;
         can-shrink: true;
         keep-aspect-ratio: true;
       }
 
       Box {
         orientation: vertical;
-        spacing: 2;
+        spacing: 0;
         hexpand: true;
 
         Label title_label {
