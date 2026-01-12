@@ -6,6 +6,12 @@ A cute and casual task manager + benchmark app for Linux!
 
 かわいいLinux向けタスクマネージャー+ベンチマークアプリ
 
+
+
+https://github.com/user-attachments/assets/24cd3da4-afe8-48e2-a467-88b4caf65959
+
+
+
 ## Features
 
 ### System Monitoring
