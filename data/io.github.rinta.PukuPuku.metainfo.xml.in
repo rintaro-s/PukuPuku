@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+    <id>io.github.rintaro_s.PukuPuku</id>
+    <name>PukuPuku</name>
+    <developer id="io.github.rintaro_s">
+        <name>rintaro-s</name>
+    </developer>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>GPL-3.0-or-later</project_license>
+
+    <url type="homepage">https://github.com/rintaro-s/PukuPuku</url>
+    <url type="bugtracker">https://github.com/rintaro-s/PukuPuku/issues</url>
+    <url type="vcs-browser">https://github.com/rintaro-s/PukuPuku</url>
+
+    <summary>A cute and casual task manager + benchmark app with character-based status display</summary>
+    <description>
+        <p>PukuPuku is a friendly system monitoring and benchmarking application that makes checking your PC's status fun and accessible.</p>
+        <p>Features:</p>
+        <ul>
+            <li>Character-based status display showing your PC's mood (Normal, Very Hard, Danger)</li>
+            <li>Quick CPU and I/O benchmarking tools</li>
+            <li>Monitor CPU, Memory, Disk, Network and GPU usage</li>
+            <li>Hand-drawn illustration style design for a casual, approachable feel</li>
+            <li>Lightweight and easy to use</li>
+            <li>See system process, thread, and handle count, uptime, clock speed</li>
+            <li>Monitor RAM and Swap usage with visual breakdowns</li>
+            <li>Track Disk utilization and transfer rates</li>
+            <li>Monitor network speeds and interface information</li>
+            <li>GPU monitoring with video encoder/decoder usage, memory and power consumption</li>
+            <li>Per-app and per-process resource breakdown</li>
+            <li>Hardware accelerated graph rendering</li>
+            <li>Built with GTK4 and Libadwaita</li>
+            <li>Written in Rust for performance and safety</li>
+        </ul>
+        <p>Design Philosophy:</p>
+        <ul>
+            <li>Casual: No intimidating technical jargon</li>
+            <li>Visual: Character expressions show your PC's mood at a glance</li>
+            <li>Friendly: Hand-drawn style creates a warm, approachable interface</li>
+            <li>Lightweight: Quick to launch and easy on system resources</li>
+        </ul>
+        <p>Based on Mission Center architecture. Comments, suggestions, and contributions welcome!</p>
+    </description>
+
+    <branding>
+        <color type="primary" scheme_preference="light">#ffa8d8</color>
+        <color type="primary" scheme_preference="dark">#c35687</color>
+    </branding>
+
+    <recommends>
+        <control>keyboard</control>
+        <control>pointing</control>
+        <control>touch</control>
+    </recommends>
+
+    <requires>
+        <display_length compare="ge">360</display_length>
+    </requires>
+
+    <screenshots>
+        <screenshot type="default">
+            <caption>Character status display and system monitoring</caption>
+        </screenshot>
+    </screenshots>
+
+    <content_rating type="oars-1.1"/>
+    <translation type="gettext">missioncenter</translation>
+    <launchable type="desktop-id">io.github.rintaro_s.PukuPuku.desktop</launchable>
+
+    <releases>
+        <release version="0.1.0" date="2026-01-12">
+            <description translate="no">
+                <p>Initial release of PukuPuku!</p>
+                <p>Features:</p>
+                <ul>
+                    <li>Character-based status display with 3 mood states</li>
+                    <li>CPU performance benchmark</li>
+                    <li>I/O speed benchmark (disk read/write)</li>
+                    <li>System monitoring (CPU, Memory, Disk, Network, GPU)</li>
+                    <li>Hand-drawn illustration style design</li>
+                    <li>Per-app and per-process resource breakdown</li>
+                    <li>Services monitoring and control</li>
+                </ul>
+                <p>Based on Mission Center v1.1.0 architecture</p>
+            </description>
+        </release>
+    </releases>
+</component>

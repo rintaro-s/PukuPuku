@@ -461,10 +461,10 @@ impl MissionCenterApplication {
             .developers(["PukuPuku", "Romeo Calota", "QwertyChouskie", "jojo2357", "Jan Luca"])
             .translator_credits(i18n("translator-credits"))
             .version(VERSION)
-            .issue_url("https://github.com/rinta/PukuPuku/issues")
+            .issue_url("https://github.com/rintaro-s/PukuPuku/issues")
             .copyright("© 2026 PukuPuku\n© 2023-2025 Mission Center Developers")
             .license_type(gtk::License::Gpl30)
-            .website("https://github.com/rinta/PukuPuku")
+            .website("https://github.com/rintaro-s/PukuPuku")
             .release_notes(r#"<p>Initial release of PukuPuku!</p>
 <ul>
 <li>Character-based status display with 3 mood states</li>
