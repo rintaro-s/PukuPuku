@@ -1,5 +1,5 @@
 {
-  "app-id": "io.github.rinta.PukuPuku",
+  "app-id": "io.github.rintaro_s.PukuPuku",
   "runtime": "org.gnome.Platform",
   "runtime-version": "49",
   "sdk": "org.gnome.Sdk",

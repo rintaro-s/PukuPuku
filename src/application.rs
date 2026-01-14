@@ -91,7 +91,7 @@ mod imp {
             obj.set_default();
 
             self.settings
-                .set(Some(gio::Settings::new("io.github.rinta.PukuPuku")));
+                .set(Some(gio::Settings::new("io.github.rintaro_s.PukuPuku")));
 
             obj.setup_gactions();
             obj.set_accels_for_action("app.quit", &["<primary>q"]);
@@ -456,7 +456,7 @@ impl MissionCenterApplication {
 
         let about = adw::AboutDialog::builder()
             .application_name("PukuPuku")
-            .application_icon("io.github.rinta.PukuPuku")
+            .application_icon("io.github.rintaro_s.PukuPuku")
             .developer_name("PukuPuku")
             .developers(["PukuPuku", "Romeo Calota", "QwertyChouskie", "jojo2357", "Jan Luca"])
             .translator_credits(i18n("translator-credits"))

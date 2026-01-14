@@ -126,7 +126,7 @@ which PukuPuku extends with a casual, character-driven interface and hand-drawn 
 
 ## License
 
-GPL-3.0-or-later
+GPL-3.0
 
 ## Acknowledgments
 
@@ -157,7 +157,16 @@ flatpak-builder --user --install --force-clean build-flatpak io.missioncenter.Mi
 Run the app from your launcher or from the command-line:
 
 ```bash
-flatpak run io.github.rinta.PukuPuku
+flatpak run io.github.rintaro_s.PukuPuku
+```
+
+### Installing from GitHub Releases
+
+Download `PukuPuku-v0.1.0-x86_64.flatpak` from [Releases](https://github.com/rintaro-s/PukuPuku/releases) and install:
+
+```bash
+flatpak install PukuPuku-v0.1.0-x86_64.flatpak
+flatpak run io.github.rintaro_s.PukuPuku
 ```
 
 

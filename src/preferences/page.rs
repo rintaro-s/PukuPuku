@@ -140,6 +140,9 @@ mod imp {
         pub toggle_net_base_2: TemplateChild<CheckButton>,
         #[template_child]
         pub toggle_net_base_10: TemplateChild<CheckButton>,
+
+        #[template_child]
+        pub character_size_scale: TemplateChild<Scale>,
     }
 
     impl PreferencesPage {
@@ -299,6 +302,22 @@ mod imp {
                 self.toggle_net_base_10,
                 "performance-page-network-use-base2"
             );
+
+            // Connect character size scale to GSettings
+            self.character_size_scale
+                .set_value(settings!().int("character-size").clamp(40, 800) as f64);
+            self.character_size_scale.connect_value_changed({
+                move |scale| {
+                    let new_size = (scale.value().round() as i32).clamp(40, 800);
+                    if let Err(e) = settings!().set_int("character-size", new_size) {
+                        gtk::glib::g_critical!(
+                            "MissionCenter::Preferences",
+                            "Failed to set character-size setting: {}",
+                            e
+                        );
+                    }
+                }
+            });
         }
     }
 

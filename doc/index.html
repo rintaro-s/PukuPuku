@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PukuPuku - かわいいLinux向けタスクマネージャー+ベンチマーク</title>
+    <meta name="description" content="PukuPuku は Mission Center をベースにした、かわいいLinux向けタスクマネージャー+ベンチマークアプリです。" />
+    <style>
+      :root { color-scheme: light dark; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        line-height: 1.6;
+        padding: 24px;
+        max-width: 980px;
+      }
+      header { margin-bottom: 20px; }
+      h1 { font-size: 1.8rem; margin: 0 0 8px; }
+      .subtitle { margin: 0; opacity: 0.8; }
+      section { margin: 18px 0; }
+      ul { padding-left: 1.3rem; }
+      code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+      .note { opacity: 0.9; }
+      a { color: inherit; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>PukuPuku</h1>
+      <p class="subtitle">かわいいLinux向けタスクマネージャー + ベンチマーク</p>
+    </header>
+
+    <section>
+      <h2>概要</h2>
+      <p>
+        PukuPuku は <a href="https://gitlab.com/mission-center-devs/mission-center" target="_blank" rel="noreferrer">Mission Center</a>
+        をベースにしたシステム監視アプリです。CPU・メモリ・ディスク・ネットワーク・GPUの状態を見やすく表示し、ベンチマーク機能も備えています。
+      </p>
+      <p class="note">
+        ※ 本プロジェクトは Mission Center のコードを元に拡張しています（クレジットはリポジトリの README を参照）。
+      </p>
+    </section>
+
+    <section>
+      <h2>機能</h2>
+      <ul>
+        <li>CPU / Memory / Disk / Network / GPU のモニタリング</li>
+        <li>かわいいキャラクターによる状態表示（CPUページで表示、サイズ調整可能）</li>
+        <li>CPUベンチマーク、I/Oベンチマーク（CPUのみ実行モードあり）</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>ビルド</h2>
+      <p>Flatpak（GNOME 49）でのビルド例：</p>
+      <pre><code>flatpak-builder --user --install --ccache build-flatpak flatpak/io.missioncenter.MissionCenter.json</code></pre>
+      <p class="note">ビルドが遅い場合は <code>--ccache</code> を付けるとキャッシュが効きます。</p>
+    </section>
+
+    <section>
+      <h2>設定</h2>
+      <p>
+        設定画面からキャラクターのサイズ（最大800px）を変更できます。
+      </p>
+    </section>
+
+    <section>
+      <h2>リンク</h2>
+      <ul>
+        <li>リポジトリ: <a href="https://github.com/rintaro-s/PukuPuku" target="_blank" rel="noreferrer">github.com/rintaro-s/PukuPuku</a></li>
+        <li>Releases: <a href="https://github.com/rintaro-s/PukuPuku/releases" target="_blank" rel="noreferrer">github.com/rintaro-s/PukuPuku/releases</a></li>
+        <li>Mission Center: <a href="https://gitlab.com/mission-center-devs/mission-center" target="_blank" rel="noreferrer">gitlab.com/mission-center-devs/mission-center</a></li>
+      </ul>
+    </section>
+  </body>
+</html>

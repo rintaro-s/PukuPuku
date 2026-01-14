@@ -98,6 +98,29 @@ template $PreferencesPage: Adw.PreferencesPage {
   }
 
   Adw.PreferencesGroup {
+    title: _("Character");
+
+    Adw.ActionRow {
+      title: _("Character Size");
+      subtitle: _("Adjust character image size");
+
+      [suffix]
+      Gtk.Scale character_size_scale {
+        draw-value: true;
+        value-pos: right;
+        adjustment: Gtk.Adjustment {
+          lower: 40;
+          upper: 800;
+          step-increment: 10;
+          page-increment: 20;
+        };
+        hexpand: false;
+        width-request: 150;
+      }
+    }
+  }
+
+  Adw.PreferencesGroup {
     title: _("App &amp; Service Pages");
 
     Adw.SwitchRow merged_process_stats {

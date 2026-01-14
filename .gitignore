@@ -87,5 +87,6 @@ BUILD
 .flatpak-builder/
 subprojects/
 
-
+tmp/
 企画書.txt
+/repo

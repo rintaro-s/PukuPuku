@@ -40,7 +40,7 @@ use window::MissionCenterWindow;
 
 use crate::i18n::ni18n_f;
 
-const APP_ID: &str = "io.github.rinta.PukuPuku";
+const APP_ID: &str = "io.github.rintaro_s.PukuPuku";
 
 mod about_system_dialog;
 mod application;

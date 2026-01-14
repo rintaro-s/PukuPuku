@@ -1,6 +1,6 @@
 desktop_file = i18n.merge_file(
-        input: 'io.github.rinta.PukuPuku.desktop.in',
-       output: 'io.github.rinta.PukuPuku.desktop',
+        input: 'io.github.rintaro_s.PukuPuku.desktop.in',
+       output: 'io.github.rintaro_s.PukuPuku.desktop',
          type: 'desktop',
        po_dir: '../po',
       install: true,
@@ -13,14 +13,14 @@ if desktop_utils.found()
 endif
 
 appstream_file = i18n.merge_file(
-        input: 'io.github.rinta.PukuPuku.metainfo.xml.in',
-       output: 'io.github.rinta.PukuPuku.metainfo.xml',
+        input: 'io.github.rintaro_s.PukuPuku.metainfo.xml.in',
+       output: 'io.github.rintaro_s.PukuPuku.metainfo.xml',
        po_dir: '../po',
       install: true,
   install_dir: join_paths(get_option('datadir'), 'metainfo')
 )
 
-install_data('io.github.rinta.PukuPuku.gschema.xml',
+install_data('io.github.rintaro_s.PukuPuku.gschema.xml',
   install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
 )
 

@@ -1,6 +1,6 @@
 use adw::prelude::*;
 use adw::subclass::prelude::*;
-use gtk::{gio, glib, subclass::prelude::*};
+use gtk::{gio, glib};
 
 use crate::i18n::i18n;
 use crate::magpie_client::Readings;
@@ -81,7 +81,7 @@ mod imp {
     #[template(resource = "/io/github/rinta/PukuPuku/ui/widgets/character_status.ui")]
     pub struct CharacterStatusWidget {
         #[template_child]
-        pub character_picture: TemplateChild<gtk::Picture>,
+        pub character_picture: TemplateChild<gtk::Image>,
 
         #[template_child]
         pub mood_label: TemplateChild<gtk::Label>,
@@ -106,6 +106,20 @@ mod imp {
         fn constructed(&self) {
             self.parent_constructed();
             self.mood_label.set_label("-");
+
+            // Connect to GSettings changes for character-size
+            let obj = self.obj();
+            let settings = crate::settings!();
+            settings.connect_changed(Some("character-size"), {
+                let obj = obj.downgrade();
+                move |_, _| {
+                    if let Some(obj) = obj.upgrade() {
+                        obj.on_settings_changed();
+                    }
+                }
+            });
+
+            obj.on_settings_changed();
         }
     }
 
@@ -132,5 +146,14 @@ impl CharacterStatusWidget {
         } else {
             imp.character_picture.set_resource(None);
         }
+
+        // Update size from settings
+        let size = crate::settings!().int("character-size").clamp(40, 800);
+        imp.character_picture.set_pixel_size(size);
+    }
+
+    pub fn on_settings_changed(&self) {
+        let size = crate::settings!().int("character-size").clamp(40, 800);
+        self.imp().character_picture.set_pixel_size(size);
     }
 }

@@ -70,4 +70,4 @@ appimage-builder --recipe "$RECEIPE_PATH/io.missioncenter.MissionCenter.yml" --a
 
 MC_VERSION=$(grep -oP 'version: \K.*' "$RECEIPE_PATH/io.missioncenter.MissionCenter.yml" | tail -n1)
 
-mv Mission\ Center*.AppImage MissionCenter_v$MC_VERSION-$(arch).AppImage
+mv PukuPuku*.AppImage PukuPuku_v$MC_VERSION-$(arch).AppImage

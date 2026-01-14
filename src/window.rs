@@ -308,6 +308,8 @@ mod imp {
         #[property(get)]
         performance_page_active: Cell<bool>,
         #[property(get)]
+        cpu_page_active: Cell<bool>,
+        #[property(get)]
         apps_page_active: Cell<bool>,
         #[property(get)]
         services_page_active: Cell<bool>,
@@ -357,6 +359,7 @@ mod imp {
                 character_status: TemplateChild::default(),
 
                 performance_page_active: Cell::new(true),
+                cpu_page_active: Cell::new(true),
                 apps_page_active: Cell::new(false),
                 services_page_active: Cell::new(false),
                 user_hid_sidebar: Cell::new(false),
@@ -387,6 +390,20 @@ mod imp {
     }
 
     impl MissionCenterWindow {
+        fn update_cpu_page_active(&self) {
+            let is_cpu = if self.performance_page_active.get() {
+                // "cpu" is the named page in PerformancePage's page_stack.
+                self.performance_page.active_page() == "cpu"
+            } else {
+                false
+            };
+
+            if is_cpu != self.cpu_page_active.get() {
+                self.cpu_page_active.set(is_cpu);
+                self.obj().notify_cpu_page_active();
+            }
+        }
+
         fn update_active_page(&self) {
             use glib::g_critical;
 
@@ -436,6 +453,8 @@ mod imp {
 
             self.obj().notify_info_button_visible();
             self.obj().notify_search_button_visible();
+
+            self.update_cpu_page_active();
 
             settings!()
                 .set_string("window-selected-page", &visible_child_name)
@@ -983,6 +1002,16 @@ mod imp {
                     }
                 }
             });
+
+            self.performance_page.connect_active_page_notify({
+                let this = self.obj().downgrade();
+                move |_| {
+                    let Some(this) = this.upgrade() else {
+                        return;
+                    };
+                    this.imp().update_cpu_page_active();
+                }
+            });
         }
     }
 
@@ -1137,7 +1166,9 @@ impl MissionCenterWindow {
         self.imp().header_bar.set_visible(true);
         self.imp().stack.set_visible(true);
 
-        self.imp().character_status.update_from_readings(&readings);
+        if self.cpu_page_active() {
+            self.imp().character_status.update_from_readings(&readings);
+        }
 
         self.imp().bottom_bar.set_visible(true);
         self.bind_property("summary-mode", &self.imp().bottom_bar.get(), "visible")
@@ -1173,7 +1204,9 @@ impl MissionCenterWindow {
             this.services_stack_page.set_visible(false);
         }
 
-        this.character_status.update_from_readings(readings);
+        if self.cpu_page_active() {
+            this.character_status.update_from_readings(readings);
+        }
 
         this.last_refresh.set(Self::get_current_timestamp());
 

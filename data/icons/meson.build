@@ -1,4 +1,4 @@
-application_id = 'io.github.rinta.PukuPuku'
+application_id = 'io.github.rintaro_s.PukuPuku'
 
 scalable_dir = join_paths('hicolor', 'scalable', 'apps')
 install_data(

@@ -17,11 +17,11 @@ template $CharacterStatusWidget : Adw.Bin {
       margin-end: 4;
       spacing: 6;
 
-      Picture character_picture {
-        width-request: 40;
-        height-request: 40;
-        can-shrink: true;
-        keep-aspect-ratio: true;
+      Image character_picture {
+        styles ["character-paper"]
+        pixel-size: 96;
+        halign: start;
+        valign: start;
       }
 
       Box {

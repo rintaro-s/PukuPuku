@@ -77,11 +77,13 @@ characterstatuswidget {
     box-shadow: 0 1px 2px alpha(black, 0.05);
 }
 
-characterstatuswidget picture {
-    border-radius: 4px;
-    /* Pencil sketch on paper style */
-    background: alpha(white, 0.3);
-    border: 1px dashed alpha(currentColor, 0.2);
+characterstatuswidget image.character-paper {
+    border-radius: 8px;
+    /* Paper plate: keep black lines readable in both themes */
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    padding: 6px;
+    box-shadow: 0 1px 2px alpha(black, 0.06);
 }
 
 /* Benchmark page styling */

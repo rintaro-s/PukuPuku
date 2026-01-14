@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-    <id>io.github.rinta.PukuPuku</id>
+    <id>io.github.rintaro_s.PukuPuku</id>
     <name>PukuPuku</name>
-    <developer id="io.github.rinta">
-        <name>PukuPuku</name>
+    <developer id="io.github.rintaro_s">
+        <name>rintaro-s</name>
     </developer>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0-or-later</project_license>
 
-    <url type="homepage">https://github.com/rinta/PukuPuku</url>
-    <url type="bugtracker">https://github.com/rinta/PukuPuku/issues</url>
-    <url type="vcs-browser">https://github.com/rinta/PukuPuku</url>
+    <url type="homepage">https://github.com/rintaro-s/PukuPuku</url>
+    <url type="bugtracker">https://github.com/rintaro-s/PukuPuku/issues</url>
+    <url type="vcs-browser">https://github.com/rintaro-s/PukuPuku</url>
 
     <summary>A cute and casual task manager + benchmark app with character-based status display</summary>
     <description>
@@ -65,7 +65,7 @@
 
     <content_rating type="oars-1.1"/>
     <translation type="gettext">missioncenter</translation>
-    <launchable type="desktop-id">io.github.rinta.PukuPuku.desktop</launchable>
+    <launchable type="desktop-id">io.github.rintaro_s.PukuPuku.desktop</launchable>
 
     <releases>
         <release version="0.1.0" date="2026-01-12">

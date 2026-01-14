@@ -28,7 +28,7 @@
         <value nick="dark" value="4"/>
     </enum>
 
-    <schema id="io.github.rinta.PukuPuku" path="/io/github/rinta/PukuPuku/">
+    <schema id="io.github.rintaro_s.PukuPuku" path="/io/github/rintaro_s/PukuPuku/">
         <key name="window-width" type="i">
             <default>600</default>
         </key>
@@ -240,6 +240,12 @@
         <key name="performance-sidebar-hidden-graphs" type="s">
             <default>""</default>
             <summary>Graphs that should be hidden in the application sidebar</summary>
+        </key>
+
+        <key name="character-size" type="i">
+            <range min="40" max="800"/>
+            <default>96</default>
+            <summary>Size of the character display in pixels</summary>
         </key>
     </schema>
 </schemalist>

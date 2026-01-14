@@ -121,6 +121,9 @@ mod imp {
         #[property(name = "info-button-visible", get = Self::info_button_visible)]
         _info_button_visible: PhantomData<bool>,
 
+        #[property(name = "active-page", get = Self::active_page)]
+        _active_page: PhantomData<String>,
+
         breakpoint_applied: Cell<bool>,
 
         pages: Cell<Vec<Pages>>,
@@ -128,6 +131,15 @@ mod imp {
 
         context_menu_view_actions: Cell<HashMap<String, gio::SimpleAction>>,
         current_view_action: Cell<gio::SimpleAction>,
+    }
+
+    impl PerformancePage {
+        fn active_page(&self) -> String {
+            self.page_stack
+                .visible_child_name()
+                .map(|s| s.to_string())
+                .unwrap_or_default()
+        }
     }
 
     impl Default for PerformancePage {
@@ -143,6 +155,7 @@ mod imp {
                 summary_mode: Cell::new(false),
                 _infobar_visible: PhantomData,
                 _info_button_visible: PhantomData,
+                _active_page: PhantomData,
 
                 breakpoint_applied: Cell::new(false),
 
@@ -2413,6 +2426,8 @@ mod imp {
                             child.property::<Option<gtk::Widget>>("infobar-content");
                         this.imp().info_bar.set_child(infobar_content.as_ref());
                     }
+
+                    this.notify_active_page();
                 }
             });
         }

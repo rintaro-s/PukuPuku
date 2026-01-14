@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=PukuPuku
 Exec=missioncenter
-Icon=io.github.rinta.PukuPuku
+Icon=io.github.rintaro_s.PukuPuku
 Terminal=false
 Type=Application
 Categories=GTK;System;Monitor;
