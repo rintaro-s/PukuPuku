@@ -102,6 +102,38 @@ glib-compile-schemas --strict "$(pwd)/data" && mv "$(pwd)/data/gschemas.compiled
 ```bash
 ninja -C $BUILD_ROOT install
 ```
+## Flatpak Installation(Recommend)
+
+Install the required Flatpak runtimes and SDKs:
+
+```bash
+flatpak install -y \
+    org.freedesktop.Platform//25.08 \
+    org.freedesktop.Sdk//25.08 \
+    org.gnome.Platform//49 \
+    org.gnome.Sdk//49
+```
+
+Build a Flatpak package:
+
+```bash
+cd flatpak
+flatpak-builder --user --install --force-clean build-flatpak io.missioncenter.MissionCenter.json
+```
+
+Run the app from your launcher or from the command-line:
+
+```bash
+flatpak run io.github.rintaro_s.PukuPuku
+```
+
+### Installing from GitHub Releases
+
+Download `PukuPuku-v0.1.0-x86_64.flatpak` from [Releases](https://github.com/rintaro-s/PukuPuku/releases) and install:
+
+```bash
+flatpak install PukuPuku-v0.1.0-x86_64.flatpak
+```
 
 ## Character Images
 
@@ -134,39 +166,7 @@ GPL-3.0
 - GTK and GNOME for the UI framework
 - NVTOP for GPU monitoring support
 - Rust Community for the amazing tooling
-
-## Flatpak Installation
-
-Install the required Flatpak runtimes and SDKs:
-
-```bash
-flatpak install -y \
-    org.freedesktop.Platform//25.08 \
-    org.freedesktop.Sdk//25.08 \
-    org.gnome.Platform//49 \
-    org.gnome.Sdk//49
-```
-
-Build a Flatpak package:
-
-```bash
-cd flatpak
-flatpak-builder --user --install --force-clean build-flatpak io.missioncenter.MissionCenter.json
-```
-
-Run the app from your launcher or from the command-line:
-
-```bash
 flatpak run io.github.rintaro_s.PukuPuku
-```
 
-### Installing from GitHub Releases
-
-Download `PukuPuku-v0.1.0-x86_64.flatpak` from [Releases](https://github.com/rintaro-s/PukuPuku/releases) and install:
-
-```bash
-flatpak install PukuPuku-v0.1.0-x86_64.flatpak
-flatpak run io.github.rintaro_s.PukuPuku
-```
 
 
