@@ -69,6 +69,10 @@ PukuPuku aims to make system monitoring fun and accessible:
 | GTK 4                        |            4.20 |
 | libadwaita                   |             1.8 |
 
+> Note: Native builds require GNOME 49-era development libraries (notably GLib/GIO >= 2.84).
+> If you are on a distro with older system libraries (e.g. Ubuntu 24.04), the native Meson build may fail;
+> in that case, use the Flatpak build/install instructions below.
+
 > Note: After cloning, run this to fetch required subprojects (such as magpie).
 ```
 git submodule update --init --recursive
